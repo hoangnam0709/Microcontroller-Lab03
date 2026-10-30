@@ -1,0 +1,2091 @@
+08:39:07 **** Build of configuration Debug for project lab3 ****
+make -j8 all 
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.d" -MT"Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.o"
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f103c6ux.d" -MT"Core/Startup/startup_stm32f103c6ux.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Startup/startup_stm32f103c6ux.o" "../Core/Startup/startup_stm32f103c6ux.s"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+../Core/Src/main.c:7:13: warning: 'MX_GPIO_Init' declared 'static' but never defined [-Wunused-function]
+    7 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:8:13: warning: 'MX_TIM2_Init' declared 'static' but never defined [-Wunused-function]
+    8 | static void MX_TIM2_Init(void);
+      |             ^~~~~~~~~~~~
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sysmem.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/system_stm32f1xx.d" -MT"Core/Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/system_stm32f1xx.o"
+arm-none-eabi-gcc -o "lab3.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Vi xu li\LAB3\lab3\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.7.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Core/Startup/startup_stm32f103c6ux.o: in function `LoopFillZerobss':
+D:/Vi xu li/LAB3/lab3/Debug/../Core/Startup/startup_stm32f103c6ux.s:100: undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:68: lab3.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+08:40:51 **** Incremental Build of configuration Debug for project lab3 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:1:5: error: expected identifier or '(' before 'while'
+    1 |     while ((uint32_t)(now - last_blink_ms) >= BLINK_INTERVAL_MS) {
+      |     ^~~~~
+../Core/Src/main.c:6:5: warning: data definition has no type or storage class
+    6 |     apply_edit_mode_lights();
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:6:5: warning: type defaults to 'int' in declaration of 'apply_edit_mode_lights' [-Wimplicit-int]
+../Core/Src/main.c:7:34: error: expected ')' before '(' token
+    7 |     Display_SetValues(edit_value, (uint8_t)system_mode);
+      |                                  ^~
+      |                                  )
+../Core/Src/main.c:8:1: error: expected identifier or '(' before '}' token
+    8 | }
+      | ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:13:5: warning: implicit declaration of function 'HAL_Init' [-Wimplicit-function-declaration]
+   13 |     HAL_Init();
+      |     ^~~~~~~~
+../Core/Src/main.c:14:5: warning: implicit declaration of function 'SystemClock_Config' [-Wimplicit-function-declaration]
+   14 |     SystemClock_Config();
+      |     ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:15:5: warning: implicit declaration of function 'MX_GPIO_Init' [-Wimplicit-function-declaration]
+   15 |     MX_GPIO_Init();
+      |     ^~~~~~~~~~~~
+../Core/Src/main.c:16:5: warning: implicit declaration of function 'MX_TIM2_Init' [-Wimplicit-function-declaration]
+   16 |     MX_TIM2_Init();
+      |     ^~~~~~~~~~~~
+../Core/Src/main.c:18:5: warning: implicit declaration of function 'Button_Init' [-Wimplicit-function-declaration]
+   18 |     Button_Init();
+      |     ^~~~~~~~~~~
+../Core/Src/main.c:19:5: warning: implicit declaration of function 'Display_Init' [-Wimplicit-function-declaration]
+   19 |     Display_Init();
+      |     ^~~~~~~~~~~~
+../Core/Src/main.c:20:5: warning: implicit declaration of function 'fsm_system_init' [-Wimplicit-function-declaration]
+   20 |     fsm_system_init();
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:22:9: warning: implicit declaration of function 'HAL_TIM_Base_Start_IT' [-Wimplicit-function-declaration]
+   22 |     if (HAL_TIM_Base_Start_IT(&htim2) != HAL_OK) {
+      |         ^~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:22:32: error: 'htim2' undeclared (first use in this function)
+   22 |     if (HAL_TIM_Base_Start_IT(&htim2) != HAL_OK) {
+      |                                ^~~~~
+../Core/Src/main.c:22:32: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:22:42: error: 'HAL_OK' undeclared (first use in this function)
+   22 |     if (HAL_TIM_Base_Start_IT(&htim2) != HAL_OK) {
+      |                                          ^~~~~~
+../Core/Src/main.c:23:9: warning: implicit declaration of function 'Error_Handler' [-Wimplicit-function-declaration]
+   23 |         Error_Handler();
+      |         ^~~~~~~~~~~~~
+../Core/Src/main.c:27:9: warning: implicit declaration of function 'fsm_system_run' [-Wimplicit-function-declaration]
+   27 |         fsm_system_run();
+      |         ^~~~~~~~~~~~~~
+../Core/Src/main.c:28:9: warning: implicit declaration of function 'Display_Scan' [-Wimplicit-function-declaration]
+   28 |         Display_Scan();
+      |         ^~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:32:6: warning: conflicting types for 'SystemClock_Config'
+   32 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:14:5: note: previous implicit declaration of 'SystemClock_Config' was here
+   14 |     SystemClock_Config();
+      |     ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'SystemClock_Config':
+../Core/Src/main.c:34:5: error: unknown type name 'RCC_OscInitTypeDef'
+   34 |     RCC_OscInitTypeDef oscillator = {0};
+      |     ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:35:5: error: unknown type name 'RCC_ClkInitTypeDef'
+   35 |     RCC_ClkInitTypeDef clock = {0};
+      |     ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:37:15: error: request for member 'OscillatorType' in something not a structure or union
+   37 |     oscillator.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+      |               ^
+../Core/Src/main.c:37:33: error: 'RCC_OSCILLATORTYPE_HSI' undeclared (first use in this function)
+   37 |     oscillator.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:38:15: error: request for member 'HSIState' in something not a structure or union
+   38 |     oscillator.HSIState = RCC_HSI_ON;
+      |               ^
+../Core/Src/main.c:38:27: error: 'RCC_HSI_ON' undeclared (first use in this function)
+   38 |     oscillator.HSIState = RCC_HSI_ON;
+      |                           ^~~~~~~~~~
+../Core/Src/main.c:39:15: error: request for member 'HSICalibrationValue' in something not a structure or union
+   39 |     oscillator.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+      |               ^
+../Core/Src/main.c:39:38: error: 'RCC_HSICALIBRATION_DEFAULT' undeclared (first use in this function)
+   39 |     oscillator.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:40:15: error: request for member 'PLL' in something not a structure or union
+   40 |     oscillator.PLL.PLLState = RCC_PLL_NONE;
+      |               ^
+../Core/Src/main.c:40:31: error: 'RCC_PLL_NONE' undeclared (first use in this function)
+   40 |     oscillator.PLL.PLLState = RCC_PLL_NONE;
+      |                               ^~~~~~~~~~~~
+../Core/Src/main.c:41:9: warning: implicit declaration of function 'HAL_RCC_OscConfig' [-Wimplicit-function-declaration]
+   41 |     if (HAL_RCC_OscConfig(&oscillator) != HAL_OK) {
+      |         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:41:43: error: 'HAL_OK' undeclared (first use in this function)
+   41 |     if (HAL_RCC_OscConfig(&oscillator) != HAL_OK) {
+      |                                           ^~~~~~
+../Core/Src/main.c:45:10: error: request for member 'ClockType' in something not a structure or union
+   45 |     clock.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
+      |          ^
+../Core/Src/main.c:45:23: error: 'RCC_CLOCKTYPE_HCLK' undeclared (first use in this function)
+   45 |     clock.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
+      |                       ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:45:44: error: 'RCC_CLOCKTYPE_SYSCLK' undeclared (first use in this function)
+   45 |     clock.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
+      |                                            ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:46:23: error: 'RCC_CLOCKTYPE_PCLK1' undeclared (first use in this function)
+   46 |                     | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
+      |                       ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:46:45: error: 'RCC_CLOCKTYPE_PCLK2' undeclared (first use in this function)
+   46 |                     | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
+      |                                             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:47:10: error: request for member 'SYSCLKSource' in something not a structure or union
+   47 |     clock.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
+      |          ^
+../Core/Src/main.c:47:26: error: 'RCC_SYSCLKSOURCE_HSI' undeclared (first use in this function)
+   47 |     clock.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
+      |                          ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:48:10: error: request for member 'AHBCLKDivider' in something not a structure or union
+   48 |     clock.AHBCLKDivider = RCC_SYSCLK_DIV1;
+      |          ^
+../Core/Src/main.c:48:27: error: 'RCC_SYSCLK_DIV1' undeclared (first use in this function)
+   48 |     clock.AHBCLKDivider = RCC_SYSCLK_DIV1;
+      |                           ^~~~~~~~~~~~~~~
+../Core/Src/main.c:49:10: error: request for member 'APB1CLKDivider' in something not a structure or union
+   49 |     clock.APB1CLKDivider = RCC_HCLK_DIV1;
+      |          ^
+../Core/Src/main.c:49:28: error: 'RCC_HCLK_DIV1' undeclared (first use in this function)
+   49 |     clock.APB1CLKDivider = RCC_HCLK_DIV1;
+      |                            ^~~~~~~~~~~~~
+../Core/Src/main.c:50:10: error: request for member 'APB2CLKDivider' in something not a structure or union
+   50 |     clock.APB2CLKDivider = RCC_HCLK_DIV1;
+      |          ^
+../Core/Src/main.c:51:9: warning: implicit declaration of function 'HAL_RCC_ClockConfig' [-Wimplicit-function-declaration]
+   51 |     if (HAL_RCC_ClockConfig(&clock, FLASH_LATENCY_0) != HAL_OK) {
+      |         ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:51:37: error: 'FLASH_LATENCY_0' undeclared (first use in this function)
+   51 |     if (HAL_RCC_ClockConfig(&clock, FLASH_LATENCY_0) != HAL_OK) {
+      |                                     ^~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:56:13: warning: conflicting types for 'MX_TIM2_Init'
+   56 | static void MX_TIM2_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:56:13: error: static declaration of 'MX_TIM2_Init' follows non-static declaration
+../Core/Src/main.c:16:5: note: previous implicit declaration of 'MX_TIM2_Init' was here
+   16 |     MX_TIM2_Init();
+      |     ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'MX_TIM2_Init':
+../Core/Src/main.c:58:5: warning: implicit declaration of function '__HAL_RCC_TIM2_CLK_ENABLE' [-Wimplicit-function-declaration]
+   58 |     __HAL_RCC_TIM2_CLK_ENABLE();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:60:5: error: 'htim2' undeclared (first use in this function)
+   60 |     htim2.Instance = TIM2;
+      |     ^~~~~
+../Core/Src/main.c:60:22: error: 'TIM2' undeclared (first use in this function)
+   60 |     htim2.Instance = TIM2;
+      |                      ^~~~
+../Core/Src/main.c:62:30: error: 'TIM_COUNTERMODE_UP' undeclared (first use in this function)
+   62 |     htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
+      |                              ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:64:32: error: 'TIM_CLOCKDIVISION_DIV1' undeclared (first use in this function)
+   64 |     htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+      |                                ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:65:36: error: 'TIM_AUTORELOAD_PRELOAD_DISABLE' undeclared (first use in this function)
+   65 |     htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:66:9: warning: implicit declaration of function 'HAL_TIM_Base_Init' [-Wimplicit-function-declaration]
+   66 |     if (HAL_TIM_Base_Init(&htim2) != HAL_OK) {
+      |         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:66:38: error: 'HAL_OK' undeclared (first use in this function)
+   66 |     if (HAL_TIM_Base_Init(&htim2) != HAL_OK) {
+      |                                      ^~~~~~
+../Core/Src/main.c:70:5: warning: implicit declaration of function 'HAL_NVIC_SetPriority' [-Wimplicit-function-declaration]
+   70 |     HAL_NVIC_SetPriority(TIM2_IRQn, 1u, 0u);
+      |     ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:70:26: error: 'TIM2_IRQn' undeclared (first use in this function)
+   70 |     HAL_NVIC_SetPriority(TIM2_IRQn, 1u, 0u);
+      |                          ^~~~~~~~~
+../Core/Src/main.c:71:5: warning: implicit declaration of function 'HAL_NVIC_EnableIRQ' [-Wimplicit-function-declaration]
+   71 |     HAL_NVIC_EnableIRQ(TIM2_IRQn);
+      |     ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:74:13: warning: conflicting types for 'MX_GPIO_Init'
+   74 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:74:13: error: static declaration of 'MX_GPIO_Init' follows non-static declaration
+../Core/Src/main.c:15:5: note: previous implicit declaration of 'MX_GPIO_Init' was here
+   15 |     MX_GPIO_Init();
+      |     ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'MX_GPIO_Init':
+../Core/Src/main.c:76:5: error: unknown type name 'GPIO_InitTypeDef'
+   76 |     GPIO_InitTypeDef gpio = {0};
+      |     ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:78:5: warning: implicit declaration of function '__HAL_RCC_AFIO_CLK_ENABLE' [-Wimplicit-function-declaration]
+   78 |     __HAL_RCC_AFIO_CLK_ENABLE();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:79:5: warning: implicit declaration of function '__HAL_RCC_GPIOA_CLK_ENABLE' [-Wimplicit-function-declaration]
+   79 |     __HAL_RCC_GPIOA_CLK_ENABLE();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:80:5: warning: implicit declaration of function '__HAL_RCC_GPIOB_CLK_ENABLE' [-Wimplicit-function-declaration]
+   80 |     __HAL_RCC_GPIOB_CLK_ENABLE();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:81:5: warning: implicit declaration of function '__HAL_AFIO_REMAP_SWJ_DISABLE' [-Wimplicit-function-declaration]
+   81 |     __HAL_AFIO_REMAP_SWJ_DISABLE();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:83:5: warning: implicit declaration of function 'HAL_GPIO_WritePin' [-Wimplicit-function-declaration]
+   83 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_SET);
+      |     ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:83:23: error: 'GPIOA' undeclared (first use in this function)
+   83 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_SET);
+      |                       ^~~~~
+../Core/Src/main.c:83:30: error: 'GPIO_PIN_3' undeclared (first use in this function)
+   83 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_SET);
+      |                              ^~~~~~~~~~
+../Core/Src/main.c:83:42: error: 'GPIO_PIN_SET' undeclared (first use in this function)
+   83 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_SET);
+      |                                          ^~~~~~~~~~~~
+../Core/Src/main.c:84:30: error: 'GPIO_PIN_5' undeclared (first use in this function)
+   84 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7 |
+      |                              ^~~~~~~~~~
+../Core/Src/main.c:84:43: error: 'GPIO_PIN_6' undeclared (first use in this function)
+   84 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7 |
+      |                                           ^~~~~~~~~~
+../Core/Src/main.c:84:56: error: 'GPIO_PIN_7' undeclared (first use in this function)
+   84 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7 |
+      |                                                        ^~~~~~~~~~
+../Core/Src/main.c:85:30: error: 'GPIO_PIN_8' undeclared (first use in this function)
+   85 |                              GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10, GPIO_PIN_RESET);
+      |                              ^~~~~~~~~~
+../Core/Src/main.c:85:43: error: 'GPIO_PIN_9' undeclared (first use in this function)
+   85 |                              GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10, GPIO_PIN_RESET);
+      |                                           ^~~~~~~~~~
+../Core/Src/main.c:85:56: error: 'GPIO_PIN_10' undeclared (first use in this function)
+   85 |                              GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10, GPIO_PIN_RESET);
+      |                                                        ^~~~~~~~~~~
+../Core/Src/main.c:85:69: error: 'GPIO_PIN_RESET' undeclared (first use in this function)
+   85 |                              GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10, GPIO_PIN_RESET);
+      |                                                                     ^~~~~~~~~~~~~~
+../Core/Src/main.c:86:30: error: 'GPIO_PIN_4' undeclared (first use in this function)
+   86 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4 | GPIO_PIN_11 | GPIO_PIN_12 |
+      |                              ^~~~~~~~~~
+../Core/Src/main.c:86:43: error: 'GPIO_PIN_11' undeclared (first use in this function)
+   86 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4 | GPIO_PIN_11 | GPIO_PIN_12 |
+      |                                           ^~~~~~~~~~~
+../Core/Src/main.c:86:57: error: 'GPIO_PIN_12' undeclared (first use in this function)
+   86 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4 | GPIO_PIN_11 | GPIO_PIN_12 |
+      |                                                         ^~~~~~~~~~~
+../Core/Src/main.c:87:30: error: 'GPIO_PIN_13' undeclared (first use in this function)
+   87 |                              GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15, GPIO_PIN_SET);
+      |                              ^~~~~~~~~~~
+../Core/Src/main.c:87:44: error: 'GPIO_PIN_14' undeclared (first use in this function)
+   87 |                              GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15, GPIO_PIN_SET);
+      |                                            ^~~~~~~~~~~
+../Core/Src/main.c:87:58: error: 'GPIO_PIN_15' undeclared (first use in this function)
+   87 |                              GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15, GPIO_PIN_SET);
+      |                                                          ^~~~~~~~~~~
+../Core/Src/main.c:88:23: error: 'GPIOB' undeclared (first use in this function)
+   88 |     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 |
+      |                       ^~~~~
+../Core/Src/main.c:88:30: error: 'GPIO_PIN_0' undeclared (first use in this function)
+   88 |     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 |
+      |                              ^~~~~~~~~~
+../Core/Src/main.c:88:43: error: 'GPIO_PIN_1' undeclared (first use in this function)
+   88 |     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 |
+      |                                           ^~~~~~~~~~
+../Core/Src/main.c:88:56: error: 'GPIO_PIN_2' undeclared (first use in this function)
+   88 |     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 |
+      |                                                        ^~~~~~~~~~
+../Core/Src/main.c:92:9: error: request for member 'Pin' in something not a structure or union
+   92 |     gpio.Pin = GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7 |
+      |         ^
+../Core/Src/main.c:95:9: error: request for member 'Mode' in something not a structure or union
+   95 |     gpio.Mode = GPIO_MODE_OUTPUT_PP;
+      |         ^
+../Core/Src/main.c:95:17: error: 'GPIO_MODE_OUTPUT_PP' undeclared (first use in this function)
+   95 |     gpio.Mode = GPIO_MODE_OUTPUT_PP;
+      |                 ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:96:9: error: request for member 'Pull' in something not a structure or union
+   96 |     gpio.Pull = GPIO_NOPULL;
+      |         ^
+../Core/Src/main.c:96:17: error: 'GPIO_NOPULL' undeclared (first use in this function)
+   96 |     gpio.Pull = GPIO_NOPULL;
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c:97:9: error: request for member 'Speed' in something not a structure or union
+   97 |     gpio.Speed = GPIO_SPEED_FREQ_LOW;
+      |         ^
+../Core/Src/main.c:97:18: error: 'GPIO_SPEED_FREQ_LOW' undeclared (first use in this function)
+   97 |     gpio.Speed = GPIO_SPEED_FREQ_LOW;
+      |                  ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:98:5: warning: implicit declaration of function 'HAL_GPIO_Init'; did you mean 'MX_GPIO_Init'? [-Wimplicit-function-declaration]
+   98 |     HAL_GPIO_Init(GPIOA, &gpio);
+      |     ^~~~~~~~~~~~~
+      |     MX_GPIO_Init
+../Core/Src/main.c:100:9: error: request for member 'Pin' in something not a structure or union
+  100 |     gpio.Pin = GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 | GPIO_PIN_4 |
+      |         ^
+../Core/Src/main.c:103:9: error: request for member 'Mode' in something not a structure or union
+  103 |     gpio.Mode = GPIO_MODE_OUTPUT_PP;
+      |         ^
+../Core/Src/main.c:104:9: error: request for member 'Pull' in something not a structure or union
+  104 |     gpio.Pull = GPIO_NOPULL;
+      |         ^
+../Core/Src/main.c:105:9: error: request for member 'Speed' in something not a structure or union
+  105 |     gpio.Speed = GPIO_SPEED_FREQ_LOW;
+      |         ^
+../Core/Src/main.c:108:9: error: request for member 'Pin' in something not a structure or union
+  108 |     gpio.Pin = GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10;
+      |         ^
+../Core/Src/main.c:109:9: error: request for member 'Mode' in something not a structure or union
+  109 |     gpio.Mode = GPIO_MODE_INPUT;
+      |         ^
+../Core/Src/main.c:109:17: error: 'GPIO_MODE_INPUT' undeclared (first use in this function)
+  109 |     gpio.Mode = GPIO_MODE_INPUT;
+      |                 ^~~~~~~~~~~~~~~
+../Core/Src/main.c:110:9: error: request for member 'Pull' in something not a structure or union
+  110 |     gpio.Pull = GPIO_PULLUP;
+      |         ^
+../Core/Src/main.c:110:17: error: 'GPIO_PULLUP' undeclared (first use in this function)
+  110 |     gpio.Pull = GPIO_PULLUP;
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:114:36: error: unknown type name 'TIM_HandleTypeDef'
+  114 | void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *timer)
+      |                                    ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:121:6: warning: conflicting types for 'Error_Handler'
+  121 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:23:9: note: previous implicit declaration of 'Error_Handler' was here
+   23 |         Error_Handler();
+      |         ^~~~~~~~~~~~~
+../Core/Src/main.c: In function 'Error_Handler':
+../Core/Src/main.c:123:5: warning: implicit declaration of function '__disable_irq' [-Wimplicit-function-declaration]
+  123 |     __disable_irq();
+      |     ^~~~~~~~~~~~~
+At top level:
+../Core/Src/main.c:74:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+   74 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:56:13: warning: 'MX_TIM2_Init' defined but not used [-Wunused-function]
+   56 | static void MX_TIM2_Init(void)
+      |             ^~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+08:42:29 **** Incremental Build of configuration Debug for project lab3 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lab3.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Vi xu li\LAB3\lab3\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3.elf
+ 
+arm-none-eabi-size   lab3.elf 
+arm-none-eabi-objdump -h -S  lab3.elf  > "lab3.list"
+arm-none-eabi-objcopy  -O ihex  lab3.elf  "lab3.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8340	     36	   1668	  10044	   273c	lab3.elf
+arm-none-eabi-objcopy  -O binary  lab3.elf  "lab3.bin"
+Finished building: default.size.stdout
+ 
+Finished building: lab3.hex
+Finished building: lab3.bin
+ 
+ 
+Finished building: lab3.list
+ 
+13:45:06 **** Incremental Build of configuration Debug for project lab3 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lab3.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Vi xu li\LAB3\lab3\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3.elf
+ 
+arm-none-eabi-size   lab3.elf 
+arm-none-eabi-objdump -h -S  lab3.elf  > "lab3.list"
+arm-none-eabi-objcopy  -O ihex  lab3.elf  "lab3.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8340	     36	   1668	  10044	   273c	lab3.elf
+arm-none-eabi-objcopy  -O binary  lab3.elf  "lab3.bin"
+Finished building: default.size.stdout
+ 
+Finished building: lab3.list
+ 
+Finished building: lab3.bin
+Finished building: lab3.hex
+ 
+ 
+13:51:35 **** Incremental Build of configuration Debug for project lab3 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:1:5: error: expected identifier or '(' before '}' token
+    1 |     }
+      |     ^
+../Core/Src/main.c:3:5: error: expected identifier or '(' before 'while'
+    3 |     while (1) {
+      |     ^~~~~
+../Core/Src/main.c:7:1: error: expected identifier or '(' before '}' token
+    7 | }
+      | ^
+../Core/Src/main.c: In function 'SystemClock_Config':
+../Core/Src/main.c:11:5: error: unknown type name 'RCC_OscInitTypeDef'
+   11 |     RCC_OscInitTypeDef oscillator = {0};
+      |     ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:12:5: error: unknown type name 'RCC_ClkInitTypeDef'
+   12 |     RCC_ClkInitTypeDef clock = {0};
+      |     ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:14:15: error: request for member 'OscillatorType' in something not a structure or union
+   14 |     oscillator.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+      |               ^
+../Core/Src/main.c:14:33: error: 'RCC_OSCILLATORTYPE_HSI' undeclared (first use in this function)
+   14 |     oscillator.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:14:33: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:15:15: error: request for member 'HSIState' in something not a structure or union
+   15 |     oscillator.HSIState = RCC_HSI_ON;
+      |               ^
+../Core/Src/main.c:15:27: error: 'RCC_HSI_ON' undeclared (first use in this function)
+   15 |     oscillator.HSIState = RCC_HSI_ON;
+      |                           ^~~~~~~~~~
+../Core/Src/main.c:16:15: error: request for member 'HSICalibrationValue' in something not a structure or union
+   16 |     oscillator.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+      |               ^
+../Core/Src/main.c:16:38: error: 'RCC_HSICALIBRATION_DEFAULT' undeclared (first use in this function)
+   16 |     oscillator.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:17:15: error: request for member 'PLL' in something not a structure or union
+   17 |     oscillator.PLL.PLLState = RCC_PLL_NONE;
+      |               ^
+../Core/Src/main.c:17:31: error: 'RCC_PLL_NONE' undeclared (first use in this function)
+   17 |     oscillator.PLL.PLLState = RCC_PLL_NONE;
+      |                               ^~~~~~~~~~~~
+../Core/Src/main.c:18:9: warning: implicit declaration of function 'HAL_RCC_OscConfig' [-Wimplicit-function-declaration]
+   18 |     if (HAL_RCC_OscConfig(&oscillator) != HAL_OK) {
+      |         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:18:43: error: 'HAL_OK' undeclared (first use in this function)
+   18 |     if (HAL_RCC_OscConfig(&oscillator) != HAL_OK) {
+      |                                           ^~~~~~
+../Core/Src/main.c:19:9: warning: implicit declaration of function 'Error_Handler' [-Wimplicit-function-declaration]
+   19 |         Error_Handler();
+      |         ^~~~~~~~~~~~~
+../Core/Src/main.c:22:10: error: request for member 'ClockType' in something not a structure or union
+   22 |     clock.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
+      |          ^
+../Core/Src/main.c:22:23: error: 'RCC_CLOCKTYPE_HCLK' undeclared (first use in this function)
+   22 |     clock.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
+      |                       ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:22:44: error: 'RCC_CLOCKTYPE_SYSCLK' undeclared (first use in this function)
+   22 |     clock.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
+      |                                            ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:23:23: error: 'RCC_CLOCKTYPE_PCLK1' undeclared (first use in this function)
+   23 |                     | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
+      |                       ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:23:45: error: 'RCC_CLOCKTYPE_PCLK2' undeclared (first use in this function)
+   23 |                     | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
+      |                                             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:24:10: error: request for member 'SYSCLKSource' in something not a structure or union
+   24 |     clock.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
+      |          ^
+../Core/Src/main.c:24:26: error: 'RCC_SYSCLKSOURCE_HSI' undeclared (first use in this function)
+   24 |     clock.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
+      |                          ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:25:10: error: request for member 'AHBCLKDivider' in something not a structure or union
+   25 |     clock.AHBCLKDivider = RCC_SYSCLK_DIV1;
+      |          ^
+../Core/Src/main.c:25:27: error: 'RCC_SYSCLK_DIV1' undeclared (first use in this function)
+   25 |     clock.AHBCLKDivider = RCC_SYSCLK_DIV1;
+      |                           ^~~~~~~~~~~~~~~
+../Core/Src/main.c:26:10: error: request for member 'APB1CLKDivider' in something not a structure or union
+   26 |     clock.APB1CLKDivider = RCC_HCLK_DIV1;
+      |          ^
+../Core/Src/main.c:26:28: error: 'RCC_HCLK_DIV1' undeclared (first use in this function)
+   26 |     clock.APB1CLKDivider = RCC_HCLK_DIV1;
+      |                            ^~~~~~~~~~~~~
+../Core/Src/main.c:27:10: error: request for member 'APB2CLKDivider' in something not a structure or union
+   27 |     clock.APB2CLKDivider = RCC_HCLK_DIV1;
+      |          ^
+../Core/Src/main.c:28:9: warning: implicit declaration of function 'HAL_RCC_ClockConfig' [-Wimplicit-function-declaration]
+   28 |     if (HAL_RCC_ClockConfig(&clock, FLASH_LATENCY_0) != HAL_OK) {
+      |         ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:28:37: error: 'FLASH_LATENCY_0' undeclared (first use in this function)
+   28 |     if (HAL_RCC_ClockConfig(&clock, FLASH_LATENCY_0) != HAL_OK) {
+      |                                     ^~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'MX_TIM2_Init':
+../Core/Src/main.c:35:5: warning: implicit declaration of function '__HAL_RCC_TIM2_CLK_ENABLE' [-Wimplicit-function-declaration]
+   35 |     __HAL_RCC_TIM2_CLK_ENABLE();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:37:5: error: 'htim2' undeclared (first use in this function)
+   37 |     htim2.Instance = TIM2;
+      |     ^~~~~
+../Core/Src/main.c:37:22: error: 'TIM2' undeclared (first use in this function)
+   37 |     htim2.Instance = TIM2;
+      |                      ^~~~
+../Core/Src/main.c:39:30: error: 'TIM_COUNTERMODE_UP' undeclared (first use in this function)
+   39 |     htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
+      |                              ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:41:32: error: 'TIM_CLOCKDIVISION_DIV1' undeclared (first use in this function)
+   41 |     htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+      |                                ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:42:36: error: 'TIM_AUTORELOAD_PRELOAD_DISABLE' undeclared (first use in this function)
+   42 |     htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:43:9: warning: implicit declaration of function 'HAL_TIM_Base_Init' [-Wimplicit-function-declaration]
+   43 |     if (HAL_TIM_Base_Init(&htim2) != HAL_OK) {
+      |         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:43:38: error: 'HAL_OK' undeclared (first use in this function)
+   43 |     if (HAL_TIM_Base_Init(&htim2) != HAL_OK) {
+      |                                      ^~~~~~
+../Core/Src/main.c:47:5: warning: implicit declaration of function 'HAL_NVIC_SetPriority' [-Wimplicit-function-declaration]
+   47 |     HAL_NVIC_SetPriority(TIM2_IRQn, 1u, 0u);
+      |     ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:47:26: error: 'TIM2_IRQn' undeclared (first use in this function)
+   47 |     HAL_NVIC_SetPriority(TIM2_IRQn, 1u, 0u);
+      |                          ^~~~~~~~~
+../Core/Src/main.c:48:5: warning: implicit declaration of function 'HAL_NVIC_EnableIRQ' [-Wimplicit-function-declaration]
+   48 |     HAL_NVIC_EnableIRQ(TIM2_IRQn);
+      |     ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'MX_GPIO_Init':
+../Core/Src/main.c:53:5: error: unknown type name 'GPIO_InitTypeDef'
+   53 |     GPIO_InitTypeDef gpio = {0};
+      |     ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:55:5: warning: implicit declaration of function '__HAL_RCC_AFIO_CLK_ENABLE' [-Wimplicit-function-declaration]
+   55 |     __HAL_RCC_AFIO_CLK_ENABLE();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:56:5: warning: implicit declaration of function '__HAL_RCC_GPIOA_CLK_ENABLE' [-Wimplicit-function-declaration]
+   56 |     __HAL_RCC_GPIOA_CLK_ENABLE();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:57:5: warning: implicit declaration of function '__HAL_RCC_GPIOB_CLK_ENABLE' [-Wimplicit-function-declaration]
+   57 |     __HAL_RCC_GPIOB_CLK_ENABLE();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:58:5: warning: implicit declaration of function '__HAL_AFIO_REMAP_SWJ_DISABLE' [-Wimplicit-function-declaration]
+   58 |     __HAL_AFIO_REMAP_SWJ_DISABLE();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:61:5: warning: implicit declaration of function 'HAL_GPIO_WritePin' [-Wimplicit-function-declaration]
+   61 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4 | GPIO_PIN_5 | GPIO_PIN_6 |
+      |     ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:61:23: error: 'GPIOA' undeclared (first use in this function)
+   61 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4 | GPIO_PIN_5 | GPIO_PIN_6 |
+      |                       ^~~~~
+../Core/Src/main.c:61:30: error: 'GPIO_PIN_4' undeclared (first use in this function)
+   61 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4 | GPIO_PIN_5 | GPIO_PIN_6 |
+      |                              ^~~~~~~~~~
+../Core/Src/main.c:61:43: error: 'GPIO_PIN_5' undeclared (first use in this function)
+   61 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4 | GPIO_PIN_5 | GPIO_PIN_6 |
+      |                                           ^~~~~~~~~~
+../Core/Src/main.c:61:56: error: 'GPIO_PIN_6' undeclared (first use in this function)
+   61 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4 | GPIO_PIN_5 | GPIO_PIN_6 |
+      |                                                        ^~~~~~~~~~
+../Core/Src/main.c:62:30: error: 'GPIO_PIN_7' undeclared (first use in this function)
+   62 |                              GPIO_PIN_7 | GPIO_PIN_8 | GPIO_PIN_9, GPIO_PIN_SET);
+      |                              ^~~~~~~~~~
+../Core/Src/main.c:62:43: error: 'GPIO_PIN_8' undeclared (first use in this function)
+   62 |                              GPIO_PIN_7 | GPIO_PIN_8 | GPIO_PIN_9, GPIO_PIN_SET);
+      |                                           ^~~~~~~~~~
+../Core/Src/main.c:62:56: error: 'GPIO_PIN_9' undeclared (first use in this function)
+   62 |                              GPIO_PIN_7 | GPIO_PIN_8 | GPIO_PIN_9, GPIO_PIN_SET);
+      |                                                        ^~~~~~~~~~
+../Core/Src/main.c:62:68: error: 'GPIO_PIN_SET' undeclared (first use in this function)
+   62 |                              GPIO_PIN_7 | GPIO_PIN_8 | GPIO_PIN_9, GPIO_PIN_SET);
+      |                                                                    ^~~~~~~~~~~~
+../Core/Src/main.c:64:30: error: 'GPIO_PIN_3' undeclared (first use in this function)
+   64 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3 | GPIO_PIN_10 | GPIO_PIN_11 |
+      |                              ^~~~~~~~~~
+../Core/Src/main.c:64:43: error: 'GPIO_PIN_10' undeclared (first use in this function)
+   64 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3 | GPIO_PIN_10 | GPIO_PIN_11 |
+      |                                           ^~~~~~~~~~~
+../Core/Src/main.c:64:57: error: 'GPIO_PIN_11' undeclared (first use in this function)
+   64 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3 | GPIO_PIN_10 | GPIO_PIN_11 |
+      |                                                         ^~~~~~~~~~~
+../Core/Src/main.c:65:30: error: 'GPIO_PIN_12' undeclared (first use in this function)
+   65 |                              GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15, GPIO_PIN_SET);
+      |                              ^~~~~~~~~~~
+../Core/Src/main.c:65:44: error: 'GPIO_PIN_13' undeclared (first use in this function)
+   65 |                              GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15, GPIO_PIN_SET);
+      |                                            ^~~~~~~~~~~
+../Core/Src/main.c:65:58: error: 'GPIO_PIN_14' undeclared (first use in this function)
+   65 |                              GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15, GPIO_PIN_SET);
+      |                                                          ^~~~~~~~~~~
+../Core/Src/main.c:65:72: error: 'GPIO_PIN_15' undeclared (first use in this function)
+   65 |                              GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15, GPIO_PIN_SET);
+      |                                                                        ^~~~~~~~~~~
+../Core/Src/main.c:66:23: error: 'GPIOB' undeclared (first use in this function)
+   66 |     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 |
+      |                       ^~~~~
+../Core/Src/main.c:66:30: error: 'GPIO_PIN_0' undeclared (first use in this function)
+   66 |     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 |
+      |                              ^~~~~~~~~~
+../Core/Src/main.c:66:43: error: 'GPIO_PIN_1' undeclared (first use in this function)
+   66 |     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 |
+      |                                           ^~~~~~~~~~
+../Core/Src/main.c:66:56: error: 'GPIO_PIN_2' undeclared (first use in this function)
+   66 |     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 |
+      |                                                        ^~~~~~~~~~
+../Core/Src/main.c:70:9: error: request for member 'Pin' in something not a structure or union
+   70 |     gpio.Pin = GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7 |
+      |         ^
+../Core/Src/main.c:73:9: error: request for member 'Mode' in something not a structure or union
+   73 |     gpio.Mode = GPIO_MODE_OUTPUT_PP;
+      |         ^
+../Core/Src/main.c:73:17: error: 'GPIO_MODE_OUTPUT_PP' undeclared (first use in this function)
+   73 |     gpio.Mode = GPIO_MODE_OUTPUT_PP;
+      |                 ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:74:9: error: request for member 'Pull' in something not a structure or union
+   74 |     gpio.Pull = GPIO_NOPULL;
+      |         ^
+../Core/Src/main.c:74:17: error: 'GPIO_NOPULL' undeclared (first use in this function)
+   74 |     gpio.Pull = GPIO_NOPULL;
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c:75:9: error: request for member 'Speed' in something not a structure or union
+   75 |     gpio.Speed = GPIO_SPEED_FREQ_LOW;
+      |         ^
+../Core/Src/main.c:75:18: error: 'GPIO_SPEED_FREQ_LOW' undeclared (first use in this function)
+   75 |     gpio.Speed = GPIO_SPEED_FREQ_LOW;
+      |                  ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:76:5: warning: implicit declaration of function 'HAL_GPIO_Init'; did you mean 'MX_GPIO_Init'? [-Wimplicit-function-declaration]
+   76 |     HAL_GPIO_Init(GPIOA, &gpio);
+      |     ^~~~~~~~~~~~~
+      |     MX_GPIO_Init
+../Core/Src/main.c:78:9: error: request for member 'Pin' in something not a structure or union
+   78 |     gpio.Pin = GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 | GPIO_PIN_4 |
+      |         ^
+../Core/Src/main.c:81:9: error: request for member 'Mode' in something not a structure or union
+   81 |     gpio.Mode = GPIO_MODE_OUTPUT_PP;
+      |         ^
+../Core/Src/main.c:82:9: error: request for member 'Pull' in something not a structure or union
+   82 |     gpio.Pull = GPIO_NOPULL;
+      |         ^
+../Core/Src/main.c:83:9: error: request for member 'Speed' in something not a structure or union
+   83 |     gpio.Speed = GPIO_SPEED_FREQ_LOW;
+      |         ^
+../Core/Src/main.c:86:9: error: request for member 'Pin' in something not a structure or union
+   86 |     gpio.Pin = GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10;
+      |         ^
+../Core/Src/main.c:87:9: error: request for member 'Mode' in something not a structure or union
+   87 |     gpio.Mode = GPIO_MODE_INPUT;
+      |         ^
+../Core/Src/main.c:87:17: error: 'GPIO_MODE_INPUT' undeclared (first use in this function)
+   87 |     gpio.Mode = GPIO_MODE_INPUT;
+      |                 ^~~~~~~~~~~~~~~
+../Core/Src/main.c:88:9: error: request for member 'Pull' in something not a structure or union
+   88 |     gpio.Pull = GPIO_PULLUP;
+      |         ^
+../Core/Src/main.c:88:17: error: 'GPIO_PULLUP' undeclared (first use in this function)
+   88 |     gpio.Pull = GPIO_PULLUP;
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:92:36: error: unknown type name 'TIM_HandleTypeDef'
+   92 | void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *timer)
+      |                                    ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:99:6: warning: conflicting types for 'Error_Handler'
+   99 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:19:9: note: previous implicit declaration of 'Error_Handler' was here
+   19 |         Error_Handler();
+      |         ^~~~~~~~~~~~~
+../Core/Src/main.c: In function 'Error_Handler':
+../Core/Src/main.c:101:5: warning: implicit declaration of function '__disable_irq' [-Wimplicit-function-declaration]
+  101 |     __disable_irq();
+      |     ^~~~~~~~~~~~~
+At top level:
+../Core/Src/main.c:51:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+   51 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:33:13: warning: 'MX_TIM2_Init' defined but not used [-Wunused-function]
+   33 | static void MX_TIM2_Init(void)
+      |             ^~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:53:12 **** Incremental Build of configuration Debug for project lab3 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lab3.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Vi xu li\LAB3\lab3\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3.elf
+ 
+arm-none-eabi-size   lab3.elf 
+arm-none-eabi-objdump -h -S  lab3.elf  > "lab3.list"
+arm-none-eabi-objcopy  -O ihex  lab3.elf  "lab3.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8324	     36	   1668	  10028	   272c	lab3.elf
+arm-none-eabi-objcopy  -O binary  lab3.elf  "lab3.bin"
+Finished building: default.size.stdout
+ 
+Finished building: lab3.hex
+Finished building: lab3.bin
+ 
+Finished building: lab3.list
+ 
+ 
+14:14:45 **** Incremental Build of configuration Debug for project lab3 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:1:5: warning: data definition has no type or storage class
+    1 |     SystemClock_Config();
+      |     ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:1:5: warning: type defaults to 'int' in declaration of 'SystemClock_Config' [-Wimplicit-int]
+../Core/Src/main.c:2:5: warning: data definition has no type or storage class
+    2 |     MX_GPIO_Init();
+      |     ^~~~~~~~~~~~
+../Core/Src/main.c:2:5: warning: type defaults to 'int' in declaration of 'MX_GPIO_Init' [-Wimplicit-int]
+../Core/Src/main.c:3:5: warning: data definition has no type or storage class
+    3 |     MX_TIM2_Init();
+      |     ^~~~~~~~~~~~
+../Core/Src/main.c:3:5: warning: type defaults to 'int' in declaration of 'MX_TIM2_Init' [-Wimplicit-int]
+../Core/Src/main.c:5:5: warning: data definition has no type or storage class
+    5 |     Button_Init();
+      |     ^~~~~~~~~~~
+../Core/Src/main.c:5:5: warning: type defaults to 'int' in declaration of 'Button_Init' [-Wimplicit-int]
+../Core/Src/main.c:6:5: warning: data definition has no type or storage class
+    6 |     Display_Init();
+      |     ^~~~~~~~~~~~
+../Core/Src/main.c:6:5: warning: type defaults to 'int' in declaration of 'Display_Init' [-Wimplicit-int]
+../Core/Src/main.c:7:5: warning: data definition has no type or storage class
+    7 |     fsm_system_init();
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:7:5: warning: type defaults to 'int' in declaration of 'fsm_system_init' [-Wimplicit-int]
+../Core/Src/main.c:9:5: error: expected identifier or '(' before 'if'
+    9 |     if (HAL_TIM_Base_Start_IT(&htim2) != HAL_OK) {
+      |     ^~
+../Core/Src/main.c:13:5: error: expected identifier or '(' before 'while'
+   13 |     while (1) {
+      |     ^~~~~
+../Core/Src/main.c:17:1: error: expected identifier or '(' before '}' token
+   17 | }
+      | ^
+../Core/Src/main.c:19:6: error: conflicting types for 'SystemClock_Config'
+   19 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:1:5: note: previous declaration of 'SystemClock_Config' was here
+    1 |     SystemClock_Config();
+      |     ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'SystemClock_Config':
+../Core/Src/main.c:21:5: error: unknown type name 'RCC_OscInitTypeDef'
+   21 |     RCC_OscInitTypeDef oscillator = {0};
+      |     ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:22:5: error: unknown type name 'RCC_ClkInitTypeDef'
+   22 |     RCC_ClkInitTypeDef clock = {0};
+      |     ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:24:15: error: request for member 'OscillatorType' in something not a structure or union
+   24 |     oscillator.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+      |               ^
+../Core/Src/main.c:24:33: error: 'RCC_OSCILLATORTYPE_HSI' undeclared (first use in this function)
+   24 |     oscillator.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:24:33: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:25:15: error: request for member 'HSIState' in something not a structure or union
+   25 |     oscillator.HSIState = RCC_HSI_ON;
+      |               ^
+../Core/Src/main.c:25:27: error: 'RCC_HSI_ON' undeclared (first use in this function)
+   25 |     oscillator.HSIState = RCC_HSI_ON;
+      |                           ^~~~~~~~~~
+../Core/Src/main.c:26:15: error: request for member 'HSICalibrationValue' in something not a structure or union
+   26 |     oscillator.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+      |               ^
+../Core/Src/main.c:26:38: error: 'RCC_HSICALIBRATION_DEFAULT' undeclared (first use in this function)
+   26 |     oscillator.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:27:15: error: request for member 'PLL' in something not a structure or union
+   27 |     oscillator.PLL.PLLState = RCC_PLL_NONE;
+      |               ^
+../Core/Src/main.c:27:31: error: 'RCC_PLL_NONE' undeclared (first use in this function)
+   27 |     oscillator.PLL.PLLState = RCC_PLL_NONE;
+      |                               ^~~~~~~~~~~~
+../Core/Src/main.c:28:9: warning: implicit declaration of function 'HAL_RCC_OscConfig' [-Wimplicit-function-declaration]
+   28 |     if (HAL_RCC_OscConfig(&oscillator) != HAL_OK) {
+      |         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:28:43: error: 'HAL_OK' undeclared (first use in this function)
+   28 |     if (HAL_RCC_OscConfig(&oscillator) != HAL_OK) {
+      |                                           ^~~~~~
+../Core/Src/main.c:29:9: warning: implicit declaration of function 'Error_Handler' [-Wimplicit-function-declaration]
+   29 |         Error_Handler();
+      |         ^~~~~~~~~~~~~
+../Core/Src/main.c:32:10: error: request for member 'ClockType' in something not a structure or union
+   32 |     clock.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
+      |          ^
+../Core/Src/main.c:32:23: error: 'RCC_CLOCKTYPE_HCLK' undeclared (first use in this function)
+   32 |     clock.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
+      |                       ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:32:44: error: 'RCC_CLOCKTYPE_SYSCLK' undeclared (first use in this function)
+   32 |     clock.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
+      |                                            ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:33:23: error: 'RCC_CLOCKTYPE_PCLK1' undeclared (first use in this function)
+   33 |                     | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
+      |                       ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:33:45: error: 'RCC_CLOCKTYPE_PCLK2' undeclared (first use in this function)
+   33 |                     | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
+      |                                             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:34:10: error: request for member 'SYSCLKSource' in something not a structure or union
+   34 |     clock.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
+      |          ^
+../Core/Src/main.c:34:26: error: 'RCC_SYSCLKSOURCE_HSI' undeclared (first use in this function)
+   34 |     clock.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
+      |                          ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:35:10: error: request for member 'AHBCLKDivider' in something not a structure or union
+   35 |     clock.AHBCLKDivider = RCC_SYSCLK_DIV1;
+      |          ^
+../Core/Src/main.c:35:27: error: 'RCC_SYSCLK_DIV1' undeclared (first use in this function)
+   35 |     clock.AHBCLKDivider = RCC_SYSCLK_DIV1;
+      |                           ^~~~~~~~~~~~~~~
+../Core/Src/main.c:36:10: error: request for member 'APB1CLKDivider' in something not a structure or union
+   36 |     clock.APB1CLKDivider = RCC_HCLK_DIV1;
+      |          ^
+../Core/Src/main.c:36:28: error: 'RCC_HCLK_DIV1' undeclared (first use in this function)
+   36 |     clock.APB1CLKDivider = RCC_HCLK_DIV1;
+      |                            ^~~~~~~~~~~~~
+../Core/Src/main.c:37:10: error: request for member 'APB2CLKDivider' in something not a structure or union
+   37 |     clock.APB2CLKDivider = RCC_HCLK_DIV1;
+      |          ^
+../Core/Src/main.c:38:9: warning: implicit declaration of function 'HAL_RCC_ClockConfig' [-Wimplicit-function-declaration]
+   38 |     if (HAL_RCC_ClockConfig(&clock, FLASH_LATENCY_0) != HAL_OK) {
+      |         ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:38:37: error: 'FLASH_LATENCY_0' undeclared (first use in this function)
+   38 |     if (HAL_RCC_ClockConfig(&clock, FLASH_LATENCY_0) != HAL_OK) {
+      |                                     ^~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:43:13: error: conflicting types for 'MX_TIM2_Init'
+   43 | static void MX_TIM2_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:3:5: note: previous declaration of 'MX_TIM2_Init' was here
+    3 |     MX_TIM2_Init();
+      |     ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'MX_TIM2_Init':
+../Core/Src/main.c:45:5: warning: implicit declaration of function '__HAL_RCC_TIM2_CLK_ENABLE' [-Wimplicit-function-declaration]
+   45 |     __HAL_RCC_TIM2_CLK_ENABLE();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:47:5: error: 'htim2' undeclared (first use in this function)
+   47 |     htim2.Instance = TIM2;
+      |     ^~~~~
+../Core/Src/main.c:47:22: error: 'TIM2' undeclared (first use in this function)
+   47 |     htim2.Instance = TIM2;
+      |                      ^~~~
+../Core/Src/main.c:49:30: error: 'TIM_COUNTERMODE_UP' undeclared (first use in this function)
+   49 |     htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
+      |                              ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:51:32: error: 'TIM_CLOCKDIVISION_DIV1' undeclared (first use in this function)
+   51 |     htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+      |                                ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:52:36: error: 'TIM_AUTORELOAD_PRELOAD_DISABLE' undeclared (first use in this function)
+   52 |     htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:53:9: warning: implicit declaration of function 'HAL_TIM_Base_Init' [-Wimplicit-function-declaration]
+   53 |     if (HAL_TIM_Base_Init(&htim2) != HAL_OK) {
+      |         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:53:38: error: 'HAL_OK' undeclared (first use in this function)
+   53 |     if (HAL_TIM_Base_Init(&htim2) != HAL_OK) {
+      |                                      ^~~~~~
+../Core/Src/main.c:57:5: warning: implicit declaration of function 'HAL_NVIC_SetPriority' [-Wimplicit-function-declaration]
+   57 |     HAL_NVIC_SetPriority(TIM2_IRQn, 1u, 0u);
+      |     ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:57:26: error: 'TIM2_IRQn' undeclared (first use in this function)
+   57 |     HAL_NVIC_SetPriority(TIM2_IRQn, 1u, 0u);
+      |                          ^~~~~~~~~
+../Core/Src/main.c:58:5: warning: implicit declaration of function 'HAL_NVIC_EnableIRQ' [-Wimplicit-function-declaration]
+   58 |     HAL_NVIC_EnableIRQ(TIM2_IRQn);
+      |     ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:61:13: error: conflicting types for 'MX_GPIO_Init'
+   61 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:2:5: note: previous declaration of 'MX_GPIO_Init' was here
+    2 |     MX_GPIO_Init();
+      |     ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'MX_GPIO_Init':
+../Core/Src/main.c:63:5: error: unknown type name 'GPIO_InitTypeDef'
+   63 |     GPIO_InitTypeDef gpio = {0};
+      |     ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:65:5: warning: implicit declaration of function '__HAL_RCC_AFIO_CLK_ENABLE' [-Wimplicit-function-declaration]
+   65 |     __HAL_RCC_AFIO_CLK_ENABLE();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:66:5: warning: implicit declaration of function '__HAL_RCC_GPIOA_CLK_ENABLE' [-Wimplicit-function-declaration]
+   66 |     __HAL_RCC_GPIOA_CLK_ENABLE();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:67:5: warning: implicit declaration of function '__HAL_RCC_GPIOB_CLK_ENABLE' [-Wimplicit-function-declaration]
+   67 |     __HAL_RCC_GPIOB_CLK_ENABLE();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:68:5: warning: implicit declaration of function '__HAL_AFIO_REMAP_SWJ_DISABLE' [-Wimplicit-function-declaration]
+   68 |     __HAL_AFIO_REMAP_SWJ_DISABLE();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:72:5: warning: implicit declaration of function 'HAL_GPIO_WritePin' [-Wimplicit-function-declaration]
+   72 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7 |
+      |     ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:72:23: error: 'GPIOA' undeclared (first use in this function)
+   72 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7 |
+      |                       ^~~~~
+../Core/Src/main.c:72:30: error: 'GPIO_PIN_5' undeclared (first use in this function)
+   72 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7 |
+      |                              ^~~~~~~~~~
+../Core/Src/main.c:72:43: error: 'GPIO_PIN_6' undeclared (first use in this function)
+   72 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7 |
+      |                                           ^~~~~~~~~~
+../Core/Src/main.c:72:56: error: 'GPIO_PIN_7' undeclared (first use in this function)
+   72 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7 |
+      |                                                        ^~~~~~~~~~
+../Core/Src/main.c:73:30: error: 'GPIO_PIN_8' undeclared (first use in this function)
+   73 |                              GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10, GPIO_PIN_SET);
+      |                              ^~~~~~~~~~
+../Core/Src/main.c:73:43: error: 'GPIO_PIN_9' undeclared (first use in this function)
+   73 |                              GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10, GPIO_PIN_SET);
+      |                                           ^~~~~~~~~~
+../Core/Src/main.c:73:56: error: 'GPIO_PIN_10' undeclared (first use in this function)
+   73 |                              GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10, GPIO_PIN_SET);
+      |                                                        ^~~~~~~~~~~
+../Core/Src/main.c:73:69: error: 'GPIO_PIN_SET' undeclared (first use in this function)
+   73 |                              GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10, GPIO_PIN_SET);
+      |                                                                     ^~~~~~~~~~~~
+../Core/Src/main.c:76:30: error: 'GPIO_PIN_3' undeclared (first use in this function)
+   76 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_11 |
+      |                              ^~~~~~~~~~
+../Core/Src/main.c:76:43: error: 'GPIO_PIN_4' undeclared (first use in this function)
+   76 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_11 |
+      |                                           ^~~~~~~~~~
+../Core/Src/main.c:76:56: error: 'GPIO_PIN_11' undeclared (first use in this function)
+   76 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_11 |
+      |                                                        ^~~~~~~~~~~
+../Core/Src/main.c:77:30: error: 'GPIO_PIN_12' undeclared (first use in this function)
+   77 |                              GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15, GPIO_PIN_SET);
+      |                              ^~~~~~~~~~~
+../Core/Src/main.c:77:44: error: 'GPIO_PIN_13' undeclared (first use in this function)
+   77 |                              GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15, GPIO_PIN_SET);
+      |                                            ^~~~~~~~~~~
+../Core/Src/main.c:77:58: error: 'GPIO_PIN_14' undeclared (first use in this function)
+   77 |                              GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15, GPIO_PIN_SET);
+      |                                                          ^~~~~~~~~~~
+../Core/Src/main.c:77:72: error: 'GPIO_PIN_15' undeclared (first use in this function)
+   77 |                              GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15, GPIO_PIN_SET);
+      |                                                                        ^~~~~~~~~~~
+../Core/Src/main.c:78:23: error: 'GPIOB' undeclared (first use in this function)
+   78 |     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 |
+      |                       ^~~~~
+../Core/Src/main.c:78:30: error: 'GPIO_PIN_0' undeclared (first use in this function)
+   78 |     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 |
+      |                              ^~~~~~~~~~
+../Core/Src/main.c:78:43: error: 'GPIO_PIN_1' undeclared (first use in this function)
+   78 |     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 |
+      |                                           ^~~~~~~~~~
+../Core/Src/main.c:78:56: error: 'GPIO_PIN_2' undeclared (first use in this function)
+   78 |     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 |
+      |                                                        ^~~~~~~~~~
+../Core/Src/main.c:82:9: error: request for member 'Pin' in something not a structure or union
+   82 |     gpio.Pin = GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7 |
+      |         ^
+../Core/Src/main.c:85:9: error: request for member 'Mode' in something not a structure or union
+   85 |     gpio.Mode = GPIO_MODE_OUTPUT_PP;
+      |         ^
+../Core/Src/main.c:85:17: error: 'GPIO_MODE_OUTPUT_PP' undeclared (first use in this function)
+   85 |     gpio.Mode = GPIO_MODE_OUTPUT_PP;
+      |                 ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:86:9: error: request for member 'Pull' in something not a structure or union
+   86 |     gpio.Pull = GPIO_NOPULL;
+      |         ^
+../Core/Src/main.c:86:17: error: 'GPIO_NOPULL' undeclared (first use in this function)
+   86 |     gpio.Pull = GPIO_NOPULL;
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c:87:9: error: request for member 'Speed' in something not a structure or union
+   87 |     gpio.Speed = GPIO_SPEED_FREQ_LOW;
+      |         ^
+../Core/Src/main.c:87:18: error: 'GPIO_SPEED_FREQ_LOW' undeclared (first use in this function)
+   87 |     gpio.Speed = GPIO_SPEED_FREQ_LOW;
+      |                  ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:88:5: warning: implicit declaration of function 'HAL_GPIO_Init'; did you mean 'MX_GPIO_Init'? [-Wimplicit-function-declaration]
+   88 |     HAL_GPIO_Init(GPIOA, &gpio);
+      |     ^~~~~~~~~~~~~
+      |     MX_GPIO_Init
+../Core/Src/main.c:90:9: error: request for member 'Pin' in something not a structure or union
+   90 |     gpio.Pin = GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 | GPIO_PIN_4 |
+      |         ^
+../Core/Src/main.c:93:9: error: request for member 'Mode' in something not a structure or union
+   93 |     gpio.Mode = GPIO_MODE_OUTPUT_PP;
+      |         ^
+../Core/Src/main.c:94:9: error: request for member 'Pull' in something not a structure or union
+   94 |     gpio.Pull = GPIO_NOPULL;
+      |         ^
+../Core/Src/main.c:95:9: error: request for member 'Speed' in something not a structure or union
+   95 |     gpio.Speed = GPIO_SPEED_FREQ_LOW;
+      |         ^
+../Core/Src/main.c:98:9: error: request for member 'Pin' in something not a structure or union
+   98 |     gpio.Pin = GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10;
+      |         ^
+../Core/Src/main.c:99:9: error: request for member 'Mode' in something not a structure or union
+   99 |     gpio.Mode = GPIO_MODE_INPUT;
+      |         ^
+../Core/Src/main.c:99:17: error: 'GPIO_MODE_INPUT' undeclared (first use in this function)
+   99 |     gpio.Mode = GPIO_MODE_INPUT;
+      |                 ^~~~~~~~~~~~~~~
+../Core/Src/main.c:100:9: error: request for member 'Pull' in something not a structure or union
+  100 |     gpio.Pull = GPIO_PULLUP;
+      |         ^
+../Core/Src/main.c:100:17: error: 'GPIO_PULLUP' undeclared (first use in this function)
+  100 |     gpio.Pull = GPIO_PULLUP;
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:104:36: error: unknown type name 'TIM_HandleTypeDef'
+  104 | void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *timer)
+      |                                    ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:111:6: warning: conflicting types for 'Error_Handler'
+  111 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:29:9: note: previous implicit declaration of 'Error_Handler' was here
+   29 |         Error_Handler();
+      |         ^~~~~~~~~~~~~
+../Core/Src/main.c: In function 'Error_Handler':
+../Core/Src/main.c:113:5: warning: implicit declaration of function '__disable_irq' [-Wimplicit-function-declaration]
+  113 |     __disable_irq();
+      |     ^~~~~~~~~~~~~
+At top level:
+../Core/Src/main.c:61:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+   61 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:43:13: warning: 'MX_TIM2_Init' defined but not used [-Wunused-function]
+   43 | static void MX_TIM2_Init(void)
+      |             ^~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:17:06 **** Incremental Build of configuration Debug for project lab3 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:1:5: warning: data definition has no type or storage class
+    1 |     SystemClock_Config();
+      |     ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:1:5: warning: type defaults to 'int' in declaration of 'SystemClock_Config' [-Wimplicit-int]
+../Core/Src/main.c:2:5: warning: data definition has no type or storage class
+    2 |     MX_GPIO_Init();
+      |     ^~~~~~~~~~~~
+../Core/Src/main.c:2:5: warning: type defaults to 'int' in declaration of 'MX_GPIO_Init' [-Wimplicit-int]
+../Core/Src/main.c:3:5: warning: data definition has no type or storage class
+    3 |     MX_TIM2_Init();
+      |     ^~~~~~~~~~~~
+../Core/Src/main.c:3:5: warning: type defaults to 'int' in declaration of 'MX_TIM2_Init' [-Wimplicit-int]
+../Core/Src/main.c:5:5: warning: data definition has no type or storage class
+    5 |     Button_Init();
+      |     ^~~~~~~~~~~
+../Core/Src/main.c:5:5: warning: type defaults to 'int' in declaration of 'Button_Init' [-Wimplicit-int]
+../Core/Src/main.c:6:5: warning: data definition has no type or storage class
+    6 |     Display_Init();
+      |     ^~~~~~~~~~~~
+../Core/Src/main.c:6:5: warning: type defaults to 'int' in declaration of 'Display_Init' [-Wimplicit-int]
+../Core/Src/main.c:7:5: warning: data definition has no type or storage class
+    7 |     fsm_system_init();
+      |     ^~~~~~~~~~~~~~~
+../Core/Src/main.c:7:5: warning: type defaults to 'int' in declaration of 'fsm_system_init' [-Wimplicit-int]
+../Core/Src/main.c:9:5: error: expected identifier or '(' before 'if'
+    9 |     if (HAL_TIM_Base_Start_IT(&htim2) != HAL_OK) {
+      |     ^~
+../Core/Src/main.c:13:5: error: expected identifier or '(' before 'while'
+   13 |     while (1) {
+      |     ^~~~~
+../Core/Src/main.c:17:1: error: expected identifier or '(' before '}' token
+   17 | }
+      | ^
+../Core/Src/main.c:19:6: error: conflicting types for 'SystemClock_Config'
+   19 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:1:5: note: previous declaration of 'SystemClock_Config' was here
+    1 |     SystemClock_Config();
+      |     ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'SystemClock_Config':
+../Core/Src/main.c:21:5: error: unknown type name 'RCC_OscInitTypeDef'
+   21 |     RCC_OscInitTypeDef oscillator = {0};
+      |     ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:22:5: error: unknown type name 'RCC_ClkInitTypeDef'
+   22 |     RCC_ClkInitTypeDef clock = {0};
+      |     ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:24:15: error: request for member 'OscillatorType' in something not a structure or union
+   24 |     oscillator.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+      |               ^
+../Core/Src/main.c:24:33: error: 'RCC_OSCILLATORTYPE_HSI' undeclared (first use in this function)
+   24 |     oscillator.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:24:33: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:25:15: error: request for member 'HSIState' in something not a structure or union
+   25 |     oscillator.HSIState = RCC_HSI_ON;
+      |               ^
+../Core/Src/main.c:25:27: error: 'RCC_HSI_ON' undeclared (first use in this function)
+   25 |     oscillator.HSIState = RCC_HSI_ON;
+      |                           ^~~~~~~~~~
+../Core/Src/main.c:26:15: error: request for member 'HSICalibrationValue' in something not a structure or union
+   26 |     oscillator.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+      |               ^
+../Core/Src/main.c:26:38: error: 'RCC_HSICALIBRATION_DEFAULT' undeclared (first use in this function)
+   26 |     oscillator.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:27:15: error: request for member 'PLL' in something not a structure or union
+   27 |     oscillator.PLL.PLLState = RCC_PLL_NONE;
+      |               ^
+../Core/Src/main.c:27:31: error: 'RCC_PLL_NONE' undeclared (first use in this function)
+   27 |     oscillator.PLL.PLLState = RCC_PLL_NONE;
+      |                               ^~~~~~~~~~~~
+../Core/Src/main.c:28:9: warning: implicit declaration of function 'HAL_RCC_OscConfig' [-Wimplicit-function-declaration]
+   28 |     if (HAL_RCC_OscConfig(&oscillator) != HAL_OK) {
+      |         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:28:43: error: 'HAL_OK' undeclared (first use in this function)
+   28 |     if (HAL_RCC_OscConfig(&oscillator) != HAL_OK) {
+      |                                           ^~~~~~
+../Core/Src/main.c:29:9: warning: implicit declaration of function 'Error_Handler' [-Wimplicit-function-declaration]
+   29 |         Error_Handler();
+      |         ^~~~~~~~~~~~~
+../Core/Src/main.c:32:10: error: request for member 'ClockType' in something not a structure or union
+   32 |     clock.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
+      |          ^
+../Core/Src/main.c:32:23: error: 'RCC_CLOCKTYPE_HCLK' undeclared (first use in this function)
+   32 |     clock.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
+      |                       ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:32:44: error: 'RCC_CLOCKTYPE_SYSCLK' undeclared (first use in this function)
+   32 |     clock.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
+      |                                            ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:33:23: error: 'RCC_CLOCKTYPE_PCLK1' undeclared (first use in this function)
+   33 |                     | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
+      |                       ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:33:45: error: 'RCC_CLOCKTYPE_PCLK2' undeclared (first use in this function)
+   33 |                     | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
+      |                                             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:34:10: error: request for member 'SYSCLKSource' in something not a structure or union
+   34 |     clock.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
+      |          ^
+../Core/Src/main.c:34:26: error: 'RCC_SYSCLKSOURCE_HSI' undeclared (first use in this function)
+   34 |     clock.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
+      |                          ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:35:10: error: request for member 'AHBCLKDivider' in something not a structure or union
+   35 |     clock.AHBCLKDivider = RCC_SYSCLK_DIV1;
+      |          ^
+../Core/Src/main.c:35:27: error: 'RCC_SYSCLK_DIV1' undeclared (first use in this function)
+   35 |     clock.AHBCLKDivider = RCC_SYSCLK_DIV1;
+      |                           ^~~~~~~~~~~~~~~
+../Core/Src/main.c:36:10: error: request for member 'APB1CLKDivider' in something not a structure or union
+   36 |     clock.APB1CLKDivider = RCC_HCLK_DIV1;
+      |          ^
+../Core/Src/main.c:36:28: error: 'RCC_HCLK_DIV1' undeclared (first use in this function)
+   36 |     clock.APB1CLKDivider = RCC_HCLK_DIV1;
+      |                            ^~~~~~~~~~~~~
+../Core/Src/main.c:37:10: error: request for member 'APB2CLKDivider' in something not a structure or union
+   37 |     clock.APB2CLKDivider = RCC_HCLK_DIV1;
+      |          ^
+../Core/Src/main.c:38:9: warning: implicit declaration of function 'HAL_RCC_ClockConfig' [-Wimplicit-function-declaration]
+   38 |     if (HAL_RCC_ClockConfig(&clock, FLASH_LATENCY_0) != HAL_OK) {
+      |         ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:38:37: error: 'FLASH_LATENCY_0' undeclared (first use in this function)
+   38 |     if (HAL_RCC_ClockConfig(&clock, FLASH_LATENCY_0) != HAL_OK) {
+      |                                     ^~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:43:13: error: conflicting types for 'MX_TIM2_Init'
+   43 | static void MX_TIM2_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:3:5: note: previous declaration of 'MX_TIM2_Init' was here
+    3 |     MX_TIM2_Init();
+      |     ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'MX_TIM2_Init':
+../Core/Src/main.c:45:5: warning: implicit declaration of function '__HAL_RCC_TIM2_CLK_ENABLE' [-Wimplicit-function-declaration]
+   45 |     __HAL_RCC_TIM2_CLK_ENABLE();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:47:5: error: 'htim2' undeclared (first use in this function)
+   47 |     htim2.Instance = TIM2;
+      |     ^~~~~
+../Core/Src/main.c:47:22: error: 'TIM2' undeclared (first use in this function)
+   47 |     htim2.Instance = TIM2;
+      |                      ^~~~
+../Core/Src/main.c:49:30: error: 'TIM_COUNTERMODE_UP' undeclared (first use in this function)
+   49 |     htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
+      |                              ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:51:32: error: 'TIM_CLOCKDIVISION_DIV1' undeclared (first use in this function)
+   51 |     htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+      |                                ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:52:36: error: 'TIM_AUTORELOAD_PRELOAD_DISABLE' undeclared (first use in this function)
+   52 |     htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:53:9: warning: implicit declaration of function 'HAL_TIM_Base_Init' [-Wimplicit-function-declaration]
+   53 |     if (HAL_TIM_Base_Init(&htim2) != HAL_OK) {
+      |         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:53:38: error: 'HAL_OK' undeclared (first use in this function)
+   53 |     if (HAL_TIM_Base_Init(&htim2) != HAL_OK) {
+      |                                      ^~~~~~
+../Core/Src/main.c:57:5: warning: implicit declaration of function 'HAL_NVIC_SetPriority' [-Wimplicit-function-declaration]
+   57 |     HAL_NVIC_SetPriority(TIM2_IRQn, 1u, 0u);
+      |     ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:57:26: error: 'TIM2_IRQn' undeclared (first use in this function)
+   57 |     HAL_NVIC_SetPriority(TIM2_IRQn, 1u, 0u);
+      |                          ^~~~~~~~~
+../Core/Src/main.c:58:5: warning: implicit declaration of function 'HAL_NVIC_EnableIRQ' [-Wimplicit-function-declaration]
+   58 |     HAL_NVIC_EnableIRQ(TIM2_IRQn);
+      |     ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:61:13: error: conflicting types for 'MX_GPIO_Init'
+   61 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:2:5: note: previous declaration of 'MX_GPIO_Init' was here
+    2 |     MX_GPIO_Init();
+      |     ^~~~~~~~~~~~
+../Core/Src/main.c: In function 'MX_GPIO_Init':
+../Core/Src/main.c:63:5: error: unknown type name 'GPIO_InitTypeDef'
+   63 |     GPIO_InitTypeDef gpio = {0};
+      |     ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:65:5: warning: implicit declaration of function '__HAL_RCC_AFIO_CLK_ENABLE' [-Wimplicit-function-declaration]
+   65 |     __HAL_RCC_AFIO_CLK_ENABLE();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:66:5: warning: implicit declaration of function '__HAL_RCC_GPIOA_CLK_ENABLE' [-Wimplicit-function-declaration]
+   66 |     __HAL_RCC_GPIOA_CLK_ENABLE();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:67:5: warning: implicit declaration of function '__HAL_RCC_GPIOB_CLK_ENABLE' [-Wimplicit-function-declaration]
+   67 |     __HAL_RCC_GPIOB_CLK_ENABLE();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:68:5: warning: implicit declaration of function '__HAL_AFIO_REMAP_SWJ_DISABLE' [-Wimplicit-function-declaration]
+   68 |     __HAL_AFIO_REMAP_SWJ_DISABLE();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:72:5: warning: implicit declaration of function 'HAL_GPIO_WritePin' [-Wimplicit-function-declaration]
+   72 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7 |
+      |     ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:72:23: error: 'GPIOA' undeclared (first use in this function)
+   72 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7 |
+      |                       ^~~~~
+../Core/Src/main.c:72:30: error: 'GPIO_PIN_5' undeclared (first use in this function)
+   72 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7 |
+      |                              ^~~~~~~~~~
+../Core/Src/main.c:72:43: error: 'GPIO_PIN_6' undeclared (first use in this function)
+   72 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7 |
+      |                                           ^~~~~~~~~~
+../Core/Src/main.c:72:56: error: 'GPIO_PIN_7' undeclared (first use in this function)
+   72 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7 |
+      |                                                        ^~~~~~~~~~
+../Core/Src/main.c:73:30: error: 'GPIO_PIN_8' undeclared (first use in this function)
+   73 |                              GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10, GPIO_PIN_SET);
+      |                              ^~~~~~~~~~
+../Core/Src/main.c:73:43: error: 'GPIO_PIN_9' undeclared (first use in this function)
+   73 |                              GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10, GPIO_PIN_SET);
+      |                                           ^~~~~~~~~~
+../Core/Src/main.c:73:56: error: 'GPIO_PIN_10' undeclared (first use in this function)
+   73 |                              GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10, GPIO_PIN_SET);
+      |                                                        ^~~~~~~~~~~
+../Core/Src/main.c:73:69: error: 'GPIO_PIN_SET' undeclared (first use in this function)
+   73 |                              GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10, GPIO_PIN_SET);
+      |                                                                     ^~~~~~~~~~~~
+../Core/Src/main.c:76:30: error: 'GPIO_PIN_3' undeclared (first use in this function)
+   76 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_11 |
+      |                              ^~~~~~~~~~
+../Core/Src/main.c:76:43: error: 'GPIO_PIN_4' undeclared (first use in this function)
+   76 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_11 |
+      |                                           ^~~~~~~~~~
+../Core/Src/main.c:76:56: error: 'GPIO_PIN_11' undeclared (first use in this function)
+   76 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_11 |
+      |                                                        ^~~~~~~~~~~
+../Core/Src/main.c:77:30: error: 'GPIO_PIN_12' undeclared (first use in this function)
+   77 |                              GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15, GPIO_PIN_SET);
+      |                              ^~~~~~~~~~~
+../Core/Src/main.c:77:44: error: 'GPIO_PIN_13' undeclared (first use in this function)
+   77 |                              GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15, GPIO_PIN_SET);
+      |                                            ^~~~~~~~~~~
+../Core/Src/main.c:77:58: error: 'GPIO_PIN_14' undeclared (first use in this function)
+   77 |                              GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15, GPIO_PIN_SET);
+      |                                                          ^~~~~~~~~~~
+../Core/Src/main.c:77:72: error: 'GPIO_PIN_15' undeclared (first use in this function)
+   77 |                              GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15, GPIO_PIN_SET);
+      |                                                                        ^~~~~~~~~~~
+../Core/Src/main.c:78:23: error: 'GPIOB' undeclared (first use in this function)
+   78 |     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 |
+      |                       ^~~~~
+../Core/Src/main.c:78:30: error: 'GPIO_PIN_0' undeclared (first use in this function)
+   78 |     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 |
+      |                              ^~~~~~~~~~
+../Core/Src/main.c:78:43: error: 'GPIO_PIN_1' undeclared (first use in this function)
+   78 |     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 |
+      |                                           ^~~~~~~~~~
+../Core/Src/main.c:78:56: error: 'GPIO_PIN_2' undeclared (first use in this function)
+   78 |     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 |
+      |                                                        ^~~~~~~~~~
+../Core/Src/main.c:82:9: error: request for member 'Pin' in something not a structure or union
+   82 |     gpio.Pin = GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7 |
+      |         ^
+../Core/Src/main.c:85:9: error: request for member 'Mode' in something not a structure or union
+   85 |     gpio.Mode = GPIO_MODE_OUTPUT_PP;
+      |         ^
+../Core/Src/main.c:85:17: error: 'GPIO_MODE_OUTPUT_PP' undeclared (first use in this function)
+   85 |     gpio.Mode = GPIO_MODE_OUTPUT_PP;
+      |                 ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:86:9: error: request for member 'Pull' in something not a structure or union
+   86 |     gpio.Pull = GPIO_NOPULL;
+      |         ^
+../Core/Src/main.c:86:17: error: 'GPIO_NOPULL' undeclared (first use in this function)
+   86 |     gpio.Pull = GPIO_NOPULL;
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c:87:9: error: request for member 'Speed' in something not a structure or union
+   87 |     gpio.Speed = GPIO_SPEED_FREQ_LOW;
+      |         ^
+../Core/Src/main.c:87:18: error: 'GPIO_SPEED_FREQ_LOW' undeclared (first use in this function)
+   87 |     gpio.Speed = GPIO_SPEED_FREQ_LOW;
+      |                  ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:88:5: warning: implicit declaration of function 'HAL_GPIO_Init'; did you mean 'MX_GPIO_Init'? [-Wimplicit-function-declaration]
+   88 |     HAL_GPIO_Init(GPIOA, &gpio);
+      |     ^~~~~~~~~~~~~
+      |     MX_GPIO_Init
+../Core/Src/main.c:90:9: error: request for member 'Pin' in something not a structure or union
+   90 |     gpio.Pin = GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 | GPIO_PIN_4 |
+      |         ^
+../Core/Src/main.c:93:9: error: request for member 'Mode' in something not a structure or union
+   93 |     gpio.Mode = GPIO_MODE_OUTPUT_PP;
+      |         ^
+../Core/Src/main.c:94:9: error: request for member 'Pull' in something not a structure or union
+   94 |     gpio.Pull = GPIO_NOPULL;
+      |         ^
+../Core/Src/main.c:95:9: error: request for member 'Speed' in something not a structure or union
+   95 |     gpio.Speed = GPIO_SPEED_FREQ_LOW;
+      |         ^
+../Core/Src/main.c:98:9: error: request for member 'Pin' in something not a structure or union
+   98 |     gpio.Pin = GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10;
+      |         ^
+../Core/Src/main.c:99:9: error: request for member 'Mode' in something not a structure or union
+   99 |     gpio.Mode = GPIO_MODE_INPUT;
+      |         ^
+../Core/Src/main.c:99:17: error: 'GPIO_MODE_INPUT' undeclared (first use in this function)
+   99 |     gpio.Mode = GPIO_MODE_INPUT;
+      |                 ^~~~~~~~~~~~~~~
+../Core/Src/main.c:100:9: error: request for member 'Pull' in something not a structure or union
+  100 |     gpio.Pull = GPIO_PULLUP;
+      |         ^
+../Core/Src/main.c:100:17: error: 'GPIO_PULLUP' undeclared (first use in this function)
+  100 |     gpio.Pull = GPIO_PULLUP;
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:104:36: error: unknown type name 'TIM_HandleTypeDef'
+  104 | void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *timer)
+      |                                    ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:111:6: warning: conflicting types for 'Error_Handler'
+  111 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:29:9: note: previous implicit declaration of 'Error_Handler' was here
+   29 |         Error_Handler();
+      |         ^~~~~~~~~~~~~
+../Core/Src/main.c: In function 'Error_Handler':
+../Core/Src/main.c:113:5: warning: implicit declaration of function '__disable_irq' [-Wimplicit-function-declaration]
+  113 |     __disable_irq();
+      |     ^~~~~~~~~~~~~
+At top level:
+../Core/Src/main.c:61:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+   61 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:43:13: warning: 'MX_TIM2_Init' defined but not used [-Wunused-function]
+   43 | static void MX_TIM2_Init(void)
+      |             ^~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:17:47 **** Incremental Build of configuration Debug for project lab3 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lab3.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Vi xu li\LAB3\lab3\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3.elf
+ 
+arm-none-eabi-size   lab3.elf 
+arm-none-eabi-objdump -h -S  lab3.elf  > "lab3.list"
+arm-none-eabi-objcopy  -O ihex  lab3.elf  "lab3.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8340	     36	   1668	  10044	   273c	lab3.elf
+arm-none-eabi-objcopy  -O binary  lab3.elf  "lab3.bin"
+Finished building: default.size.stdout
+ 
+Finished building: lab3.hex
+Finished building: lab3.bin
+ 
+Finished building: lab3.list
+ 
+ 
+14:24:36 **** Incremental Build of configuration Debug for project lab3 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+arm-none-eabi-gcc -o "lab3.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Vi xu li\LAB3\lab3\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3.elf
+ 
+arm-none-eabi-size   lab3.elf 
+arm-none-eabi-objdump -h -S  lab3.elf  > "lab3.list"
+arm-none-eabi-objcopy  -O ihex  lab3.elf  "lab3.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9204	     36	   1668	  10908	   2a9c	lab3.elf
+arm-none-eabi-objcopy  -O binary  lab3.elf  "lab3.bin"
+Finished building: default.size.stdout
+ 
+Finished building: lab3.hex
+Finished building: lab3.bin
+ 
+ 
+Finished building: lab3.list
+ 
+14:38:33 **** Incremental Build of configuration Debug for project lab3 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+../Core/Src/stm32f1xx_it.c:1:5: error: expected identifier or '(' before 'while'
+    1 |     while (1) {
+      |     ^~~~~
+../Core/Src/stm32f1xx_it.c:5:1: error: expected identifier or '(' before '}' token
+    5 | }
+      | ^
+../Core/Src/stm32f1xx_it.c: In function 'SystemClock_Config':
+../Core/Src/stm32f1xx_it.c:9:5: error: unknown type name 'RCC_OscInitTypeDef'
+    9 |     RCC_OscInitTypeDef oscillator = {0};
+      |     ^~~~~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:10:5: error: unknown type name 'RCC_ClkInitTypeDef'
+   10 |     RCC_ClkInitTypeDef clock = {0};
+      |     ^~~~~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:12:15: error: request for member 'OscillatorType' in something not a structure or union
+   12 |     oscillator.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+      |               ^
+../Core/Src/stm32f1xx_it.c:12:33: error: 'RCC_OSCILLATORTYPE_HSI' undeclared (first use in this function)
+   12 |     oscillator.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:12:33: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/stm32f1xx_it.c:13:15: error: request for member 'HSIState' in something not a structure or union
+   13 |     oscillator.HSIState = RCC_HSI_ON;
+      |               ^
+../Core/Src/stm32f1xx_it.c:13:27: error: 'RCC_HSI_ON' undeclared (first use in this function)
+   13 |     oscillator.HSIState = RCC_HSI_ON;
+      |                           ^~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:14:15: error: request for member 'HSICalibrationValue' in something not a structure or union
+   14 |     oscillator.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+      |               ^
+../Core/Src/stm32f1xx_it.c:14:38: error: 'RCC_HSICALIBRATION_DEFAULT' undeclared (first use in this function)
+   14 |     oscillator.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:15:15: error: request for member 'PLL' in something not a structure or union
+   15 |     oscillator.PLL.PLLState = RCC_PLL_NONE;
+      |               ^
+../Core/Src/stm32f1xx_it.c:15:31: error: 'RCC_PLL_NONE' undeclared (first use in this function)
+   15 |     oscillator.PLL.PLLState = RCC_PLL_NONE;
+      |                               ^~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:16:9: warning: implicit declaration of function 'HAL_RCC_OscConfig' [-Wimplicit-function-declaration]
+   16 |     if (HAL_RCC_OscConfig(&oscillator) != HAL_OK) {
+      |         ^~~~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:16:43: error: 'HAL_OK' undeclared (first use in this function)
+   16 |     if (HAL_RCC_OscConfig(&oscillator) != HAL_OK) {
+      |                                           ^~~~~~
+../Core/Src/stm32f1xx_it.c:17:9: warning: implicit declaration of function 'Error_Handler' [-Wimplicit-function-declaration]
+   17 |         Error_Handler();
+      |         ^~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:20:10: error: request for member 'ClockType' in something not a structure or union
+   20 |     clock.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
+      |          ^
+../Core/Src/stm32f1xx_it.c:20:23: error: 'RCC_CLOCKTYPE_HCLK' undeclared (first use in this function)
+   20 |     clock.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
+      |                       ^~~~~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:20:44: error: 'RCC_CLOCKTYPE_SYSCLK' undeclared (first use in this function)
+   20 |     clock.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
+      |                                            ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:21:23: error: 'RCC_CLOCKTYPE_PCLK1' undeclared (first use in this function)
+   21 |                     | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
+      |                       ^~~~~~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:21:45: error: 'RCC_CLOCKTYPE_PCLK2' undeclared (first use in this function)
+   21 |                     | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
+      |                                             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:22:10: error: request for member 'SYSCLKSource' in something not a structure or union
+   22 |     clock.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
+      |          ^
+../Core/Src/stm32f1xx_it.c:22:26: error: 'RCC_SYSCLKSOURCE_HSI' undeclared (first use in this function)
+   22 |     clock.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
+      |                          ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:23:10: error: request for member 'AHBCLKDivider' in something not a structure or union
+   23 |     clock.AHBCLKDivider = RCC_SYSCLK_DIV1;
+      |          ^
+../Core/Src/stm32f1xx_it.c:23:27: error: 'RCC_SYSCLK_DIV1' undeclared (first use in this function)
+   23 |     clock.AHBCLKDivider = RCC_SYSCLK_DIV1;
+      |                           ^~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:24:10: error: request for member 'APB1CLKDivider' in something not a structure or union
+   24 |     clock.APB1CLKDivider = RCC_HCLK_DIV1;
+      |          ^
+../Core/Src/stm32f1xx_it.c:24:28: error: 'RCC_HCLK_DIV1' undeclared (first use in this function)
+   24 |     clock.APB1CLKDivider = RCC_HCLK_DIV1;
+      |                            ^~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:25:10: error: request for member 'APB2CLKDivider' in something not a structure or union
+   25 |     clock.APB2CLKDivider = RCC_HCLK_DIV1;
+      |          ^
+../Core/Src/stm32f1xx_it.c:26:9: warning: implicit declaration of function 'HAL_RCC_ClockConfig' [-Wimplicit-function-declaration]
+   26 |     if (HAL_RCC_ClockConfig(&clock, FLASH_LATENCY_0) != HAL_OK) {
+      |         ^~~~~~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:26:37: error: 'FLASH_LATENCY_0' undeclared (first use in this function)
+   26 |     if (HAL_RCC_ClockConfig(&clock, FLASH_LATENCY_0) != HAL_OK) {
+      |                                     ^~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c: In function 'MX_TIM2_Init':
+../Core/Src/stm32f1xx_it.c:33:5: warning: implicit declaration of function '__HAL_RCC_TIM2_CLK_ENABLE' [-Wimplicit-function-declaration]
+   33 |     __HAL_RCC_TIM2_CLK_ENABLE();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:35:5: error: 'htim2' undeclared (first use in this function)
+   35 |     htim2.Instance = TIM2;
+      |     ^~~~~
+../Core/Src/stm32f1xx_it.c:35:22: error: 'TIM2' undeclared (first use in this function)
+   35 |     htim2.Instance = TIM2;
+      |                      ^~~~
+../Core/Src/stm32f1xx_it.c:37:30: error: 'TIM_COUNTERMODE_UP' undeclared (first use in this function)
+   37 |     htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
+      |                              ^~~~~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:39:32: error: 'TIM_CLOCKDIVISION_DIV1' undeclared (first use in this function)
+   39 |     htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+      |                                ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:40:36: error: 'TIM_AUTORELOAD_PRELOAD_DISABLE' undeclared (first use in this function)
+   40 |     htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:41:9: warning: implicit declaration of function 'HAL_TIM_Base_Init' [-Wimplicit-function-declaration]
+   41 |     if (HAL_TIM_Base_Init(&htim2) != HAL_OK) {
+      |         ^~~~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:41:38: error: 'HAL_OK' undeclared (first use in this function)
+   41 |     if (HAL_TIM_Base_Init(&htim2) != HAL_OK) {
+      |                                      ^~~~~~
+../Core/Src/stm32f1xx_it.c:45:5: warning: implicit declaration of function 'HAL_NVIC_SetPriority' [-Wimplicit-function-declaration]
+   45 |     HAL_NVIC_SetPriority(TIM2_IRQn, 1u, 0u);
+      |     ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:45:26: error: 'TIM2_IRQn' undeclared (first use in this function)
+   45 |     HAL_NVIC_SetPriority(TIM2_IRQn, 1u, 0u);
+      |                          ^~~~~~~~~
+../Core/Src/stm32f1xx_it.c:46:5: warning: implicit declaration of function 'HAL_NVIC_EnableIRQ' [-Wimplicit-function-declaration]
+   46 |     HAL_NVIC_EnableIRQ(TIM2_IRQn);
+      |     ^~~~~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c: In function 'MX_GPIO_Init':
+../Core/Src/stm32f1xx_it.c:51:5: error: unknown type name 'GPIO_InitTypeDef'
+   51 |     GPIO_InitTypeDef gpio = {0};
+      |     ^~~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:53:5: warning: implicit declaration of function '__HAL_RCC_AFIO_CLK_ENABLE' [-Wimplicit-function-declaration]
+   53 |     __HAL_RCC_AFIO_CLK_ENABLE();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:54:5: warning: implicit declaration of function '__HAL_RCC_GPIOA_CLK_ENABLE' [-Wimplicit-function-declaration]
+   54 |     __HAL_RCC_GPIOA_CLK_ENABLE();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:55:5: warning: implicit declaration of function '__HAL_RCC_GPIOB_CLK_ENABLE' [-Wimplicit-function-declaration]
+   55 |     __HAL_RCC_GPIOB_CLK_ENABLE();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:56:5: warning: implicit declaration of function '__HAL_AFIO_REMAP_SWJ_DISABLE' [-Wimplicit-function-declaration]
+   56 |     __HAL_AFIO_REMAP_SWJ_DISABLE();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:58:5: warning: implicit declaration of function 'HAL_GPIO_WritePin' [-Wimplicit-function-declaration]
+   58 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_SET);
+      |     ^~~~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:58:23: error: 'GPIOA' undeclared (first use in this function)
+   58 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_SET);
+      |                       ^~~~~
+../Core/Src/stm32f1xx_it.c:58:30: error: 'GPIO_PIN_3' undeclared (first use in this function)
+   58 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_SET);
+      |                              ^~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:58:42: error: 'GPIO_PIN_SET' undeclared (first use in this function)
+   58 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_SET);
+      |                                          ^~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:59:30: error: 'GPIO_PIN_5' undeclared (first use in this function)
+   59 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7 |
+      |                              ^~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:59:43: error: 'GPIO_PIN_6' undeclared (first use in this function)
+   59 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7 |
+      |                                           ^~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:59:56: error: 'GPIO_PIN_7' undeclared (first use in this function)
+   59 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7 |
+      |                                                        ^~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:60:30: error: 'GPIO_PIN_8' undeclared (first use in this function)
+   60 |                              GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10, GPIO_PIN_RESET);
+      |                              ^~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:60:43: error: 'GPIO_PIN_9' undeclared (first use in this function)
+   60 |                              GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10, GPIO_PIN_RESET);
+      |                                           ^~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:60:56: error: 'GPIO_PIN_10' undeclared (first use in this function)
+   60 |                              GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10, GPIO_PIN_RESET);
+      |                                                        ^~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:60:69: error: 'GPIO_PIN_RESET' undeclared (first use in this function)
+   60 |                              GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10, GPIO_PIN_RESET);
+      |                                                                     ^~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:61:30: error: 'GPIO_PIN_4' undeclared (first use in this function)
+   61 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4 | GPIO_PIN_11 | GPIO_PIN_12 |
+      |                              ^~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:61:43: error: 'GPIO_PIN_11' undeclared (first use in this function)
+   61 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4 | GPIO_PIN_11 | GPIO_PIN_12 |
+      |                                           ^~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:61:57: error: 'GPIO_PIN_12' undeclared (first use in this function)
+   61 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4 | GPIO_PIN_11 | GPIO_PIN_12 |
+      |                                                         ^~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:62:30: error: 'GPIO_PIN_13' undeclared (first use in this function)
+   62 |                              GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15, GPIO_PIN_SET);
+      |                              ^~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:62:44: error: 'GPIO_PIN_14' undeclared (first use in this function)
+   62 |                              GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15, GPIO_PIN_SET);
+      |                                            ^~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:62:58: error: 'GPIO_PIN_15' undeclared (first use in this function)
+   62 |                              GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15, GPIO_PIN_SET);
+      |                                                          ^~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:63:23: error: 'GPIOB' undeclared (first use in this function)
+   63 |     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 |
+      |                       ^~~~~
+../Core/Src/stm32f1xx_it.c:63:30: error: 'GPIO_PIN_0' undeclared (first use in this function)
+   63 |     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 |
+      |                              ^~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:63:43: error: 'GPIO_PIN_1' undeclared (first use in this function)
+   63 |     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 |
+      |                                           ^~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:63:56: error: 'GPIO_PIN_2' undeclared (first use in this function)
+   63 |     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 |
+      |                                                        ^~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:67:9: error: request for member 'Pin' in something not a structure or union
+   67 |     gpio.Pin = GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7 |
+      |         ^
+../Core/Src/stm32f1xx_it.c:70:9: error: request for member 'Mode' in something not a structure or union
+   70 |     gpio.Mode = GPIO_MODE_OUTPUT_PP;
+      |         ^
+../Core/Src/stm32f1xx_it.c:70:17: error: 'GPIO_MODE_OUTPUT_PP' undeclared (first use in this function)
+   70 |     gpio.Mode = GPIO_MODE_OUTPUT_PP;
+      |                 ^~~~~~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:71:9: error: request for member 'Pull' in something not a structure or union
+   71 |     gpio.Pull = GPIO_NOPULL;
+      |         ^
+../Core/Src/stm32f1xx_it.c:71:17: error: 'GPIO_NOPULL' undeclared (first use in this function)
+   71 |     gpio.Pull = GPIO_NOPULL;
+      |                 ^~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:72:9: error: request for member 'Speed' in something not a structure or union
+   72 |     gpio.Speed = GPIO_SPEED_FREQ_LOW;
+      |         ^
+../Core/Src/stm32f1xx_it.c:72:18: error: 'GPIO_SPEED_FREQ_LOW' undeclared (first use in this function)
+   72 |     gpio.Speed = GPIO_SPEED_FREQ_LOW;
+      |                  ^~~~~~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:73:5: warning: implicit declaration of function 'HAL_GPIO_Init'; did you mean 'MX_GPIO_Init'? [-Wimplicit-function-declaration]
+   73 |     HAL_GPIO_Init(GPIOA, &gpio);
+      |     ^~~~~~~~~~~~~
+      |     MX_GPIO_Init
+../Core/Src/stm32f1xx_it.c:75:9: error: request for member 'Pin' in something not a structure or union
+   75 |     gpio.Pin = GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 | GPIO_PIN_4 |
+      |         ^
+../Core/Src/stm32f1xx_it.c:78:9: error: request for member 'Mode' in something not a structure or union
+   78 |     gpio.Mode = GPIO_MODE_OUTPUT_PP;
+      |         ^
+../Core/Src/stm32f1xx_it.c:79:9: error: request for member 'Pull' in something not a structure or union
+   79 |     gpio.Pull = GPIO_NOPULL;
+      |         ^
+../Core/Src/stm32f1xx_it.c:80:9: error: request for member 'Speed' in something not a structure or union
+   80 |     gpio.Speed = GPIO_SPEED_FREQ_LOW;
+      |         ^
+../Core/Src/stm32f1xx_it.c:83:9: error: request for member 'Pin' in something not a structure or union
+   83 |     gpio.Pin = GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10;
+      |         ^
+../Core/Src/stm32f1xx_it.c:84:9: error: request for member 'Mode' in something not a structure or union
+   84 |     gpio.Mode = GPIO_MODE_INPUT;
+      |         ^
+../Core/Src/stm32f1xx_it.c:84:17: error: 'GPIO_MODE_INPUT' undeclared (first use in this function)
+   84 |     gpio.Mode = GPIO_MODE_INPUT;
+      |                 ^~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:85:9: error: request for member 'Pull' in something not a structure or union
+   85 |     gpio.Pull = GPIO_PULLUP;
+      |         ^
+../Core/Src/stm32f1xx_it.c:85:17: error: 'GPIO_PULLUP' undeclared (first use in this function)
+   85 |     gpio.Pull = GPIO_PULLUP;
+      |                 ^~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c: At top level:
+../Core/Src/stm32f1xx_it.c:89:36: error: unknown type name 'TIM_HandleTypeDef'
+   89 | void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *timer)
+      |                                    ^~~~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c: In function 'TIM2_IRQHandler':
+../Core/Src/stm32f1xx_it.c:100:5: warning: implicit declaration of function 'HAL_TIM_IRQHandler'; did you mean 'TIM2_IRQHandler'? [-Wimplicit-function-declaration]
+  100 |     HAL_TIM_IRQHandler(&htim2);
+      |     ^~~~~~~~~~~~~~~~~~
+      |     TIM2_IRQHandler
+../Core/Src/stm32f1xx_it.c:100:25: error: 'htim2' undeclared (first use in this function)
+  100 |     HAL_TIM_IRQHandler(&htim2);
+      |                         ^~~~~
+../Core/Src/stm32f1xx_it.c: At top level:
+../Core/Src/stm32f1xx_it.c:103:6: warning: conflicting types for 'Error_Handler'
+  103 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:17:9: note: previous implicit declaration of 'Error_Handler' was here
+   17 |         Error_Handler();
+      |         ^~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c: In function 'Error_Handler':
+../Core/Src/stm32f1xx_it.c:105:5: warning: implicit declaration of function '__disable_irq' [-Wimplicit-function-declaration]
+  105 |     __disable_irq();
+      |     ^~~~~~~~~~~~~
+At top level:
+../Core/Src/stm32f1xx_it.c:49:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+   49 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:31:13: warning: 'MX_TIM2_Init' defined but not used [-Wunused-function]
+   31 | static void MX_TIM2_Init(void)
+      |             ^~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/stm32f1xx_it.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:40:59 **** Incremental Build of configuration Debug for project lab3 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+../Core/Src/main.c:1:5: error: expected identifier or '(' before 'while'
+    1 |     while (1) {
+      |     ^~~~~
+../Core/Src/main.c:5:1: error: expected identifier or '(' before '}' token
+    5 | }
+      | ^
+../Core/Src/main.c: In function 'SystemClock_Config':
+../Core/Src/main.c:9:5: error: unknown type name 'RCC_OscInitTypeDef'
+    9 |     RCC_OscInitTypeDef oscillator = {0};
+      |     ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:10:5: error: unknown type name 'RCC_ClkInitTypeDef'
+   10 |     RCC_ClkInitTypeDef clock = {0};
+      |     ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:12:15: error: request for member 'OscillatorType' in something not a structure or union
+   12 |     oscillator.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+      |               ^
+../Core/Src/main.c:12:33: error: 'RCC_OSCILLATORTYPE_HSI' undeclared (first use in this function)
+   12 |     oscillator.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:12:33: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:13:15: error: request for member 'HSIState' in something not a structure or union
+   13 |     oscillator.HSIState = RCC_HSI_ON;
+      |               ^
+../Core/Src/main.c:13:27: error: 'RCC_HSI_ON' undeclared (first use in this function)
+   13 |     oscillator.HSIState = RCC_HSI_ON;
+      |                           ^~~~~~~~~~
+../Core/Src/main.c:14:15: error: request for member 'HSICalibrationValue' in something not a structure or union
+   14 |     oscillator.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+      |               ^
+../Core/Src/stm32f1xx_it.c:1:5: error: expected identifier or '(' before '}' token
+    1 |     }
+      |     ^
+../Core/Src/main.c:14:38: error: 'RCC_HSICALIBRATION_DEFAULT' undeclared (first use in this function)
+   14 |     oscillator.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:2:1: error: expected identifier or '(' before '}' token
+    2 | }
+      | ^
+../Core/Src/main.c:15:15: error: request for member 'PLL' in something not a structure or union
+   15 |     oscillator.PLL.PLLState = RCC_PLL_NONE;
+      |               ^
+../Core/Src/main.c:15:31: error: 'RCC_PLL_NONE' undeclared (first use in this function)
+   15 |     oscillator.PLL.PLLState = RCC_PLL_NONE;
+      |                               ^~~~~~~~~~~~
+../Core/Src/main.c:16:9: warning: implicit declaration of function 'HAL_RCC_OscConfig' [-Wimplicit-function-declaration]
+   16 |     if (HAL_RCC_OscConfig(&oscillator) != HAL_OK) {
+      |         ^~~~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c: In function 'SysTick_Handler':
+../Core/Src/stm32f1xx_it.c:30:5: warning: implicit declaration of function 'HAL_IncTick' [-Wimplicit-function-declaration]
+   30 |     HAL_IncTick();
+      |     ^~~~~~~~~~~
+../Core/Src/main.c:16:43: error: 'HAL_OK' undeclared (first use in this function)
+   16 |     if (HAL_RCC_OscConfig(&oscillator) != HAL_OK) {
+      |                                           ^~~~~~
+../Core/Src/stm32f1xx_it.c: In function 'TIM2_IRQHandler':
+../Core/Src/stm32f1xx_it.c:38:5: warning: implicit declaration of function 'HAL_TIM_IRQHandler'; did you mean 'TIM2_IRQHandler'? [-Wimplicit-function-declaration]
+   38 |     HAL_TIM_IRQHandler(&htim2);
+      |     ^~~~~~~~~~~~~~~~~~
+      |     TIM2_IRQHandler
+../Core/Src/main.c:17:9: warning: implicit declaration of function 'Error_Handler' [-Wimplicit-function-declaration]
+   17 |         Error_Handler();
+      |         ^~~~~~~~~~~~~
+../Core/Src/main.c:20:10: error: request for member 'ClockType' in something not a structure or union
+   20 |     clock.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
+      |          ^
+../Core/Src/stm32f1xx_it.c:38:25: error: 'htim2' undeclared (first use in this function)
+   38 |     HAL_TIM_IRQHandler(&htim2);
+      |                         ^~~~~
+../Core/Src/main.c:20:23: error: 'RCC_CLOCKTYPE_HCLK' undeclared (first use in this function)
+   20 |     clock.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
+      |                       ^~~~~~~~~~~~~~~~~~
+../Core/Src/stm32f1xx_it.c:38:25: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:20:44: error: 'RCC_CLOCKTYPE_SYSCLK' undeclared (first use in this function)
+   20 |     clock.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
+      |                                            ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:21:23: error: 'RCC_CLOCKTYPE_PCLK1' undeclared (first use in this function)
+   21 |                     | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
+      |                       ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:21:45: error: 'RCC_CLOCKTYPE_PCLK2' undeclared (first use in this function)
+   21 |                     | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
+      |                                             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:22:10: error: request for member 'SYSCLKSource' in something not a structure or union
+   22 |     clock.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
+      |          ^
+../Core/Src/main.c:22:26: error: 'RCC_SYSCLKSOURCE_HSI' undeclared (first use in this function)
+   22 |     clock.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
+      |                          ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:23:10: error: request for member 'AHBCLKDivider' in something not a structure or union
+   23 |     clock.AHBCLKDivider = RCC_SYSCLK_DIV1;
+      |          ^
+../Core/Src/main.c:23:27: error: 'RCC_SYSCLK_DIV1' undeclared (first use in this function)
+   23 |     clock.AHBCLKDivider = RCC_SYSCLK_DIV1;
+      |                           ^~~~~~~~~~~~~~~
+../Core/Src/main.c:24:10: error: request for member 'APB1CLKDivider' in something not a structure or union
+   24 |     clock.APB1CLKDivider = RCC_HCLK_DIV1;
+      |          ^
+../Core/Src/main.c:24:28: error: 'RCC_HCLK_DIV1' undeclared (first use in this function)
+   24 |     clock.APB1CLKDivider = RCC_HCLK_DIV1;
+      |                            ^~~~~~~~~~~~~
+../Core/Src/main.c:25:10: error: request for member 'APB2CLKDivider' in something not a structure or union
+   25 |     clock.APB2CLKDivider = RCC_HCLK_DIV1;
+      |          ^
+make: *** [Core/Src/subdir.mk:34: Core/Src/stm32f1xx_it.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Core/Src/main.c:26:9: warning: implicit declaration of function 'HAL_RCC_ClockConfig' [-Wimplicit-function-declaration]
+   26 |     if (HAL_RCC_ClockConfig(&clock, FLASH_LATENCY_0) != HAL_OK) {
+      |         ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:26:37: error: 'FLASH_LATENCY_0' undeclared (first use in this function)
+   26 |     if (HAL_RCC_ClockConfig(&clock, FLASH_LATENCY_0) != HAL_OK) {
+      |                                     ^~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'MX_TIM2_Init':
+../Core/Src/main.c:33:5: warning: implicit declaration of function '__HAL_RCC_TIM2_CLK_ENABLE' [-Wimplicit-function-declaration]
+   33 |     __HAL_RCC_TIM2_CLK_ENABLE();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:35:5: error: 'htim2' undeclared (first use in this function)
+   35 |     htim2.Instance = TIM2;
+      |     ^~~~~
+../Core/Src/main.c:35:22: error: 'TIM2' undeclared (first use in this function)
+   35 |     htim2.Instance = TIM2;
+      |                      ^~~~
+../Core/Src/main.c:37:30: error: 'TIM_COUNTERMODE_UP' undeclared (first use in this function)
+   37 |     htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
+      |                              ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:39:32: error: 'TIM_CLOCKDIVISION_DIV1' undeclared (first use in this function)
+   39 |     htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+      |                                ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:40:36: error: 'TIM_AUTORELOAD_PRELOAD_DISABLE' undeclared (first use in this function)
+   40 |     htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:41:9: warning: implicit declaration of function 'HAL_TIM_Base_Init' [-Wimplicit-function-declaration]
+   41 |     if (HAL_TIM_Base_Init(&htim2) != HAL_OK) {
+      |         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:41:38: error: 'HAL_OK' undeclared (first use in this function)
+   41 |     if (HAL_TIM_Base_Init(&htim2) != HAL_OK) {
+      |                                      ^~~~~~
+../Core/Src/main.c:45:5: warning: implicit declaration of function 'HAL_NVIC_SetPriority' [-Wimplicit-function-declaration]
+   45 |     HAL_NVIC_SetPriority(TIM2_IRQn, 1u, 0u);
+      |     ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:45:26: error: 'TIM2_IRQn' undeclared (first use in this function)
+   45 |     HAL_NVIC_SetPriority(TIM2_IRQn, 1u, 0u);
+      |                          ^~~~~~~~~
+../Core/Src/main.c:46:5: warning: implicit declaration of function 'HAL_NVIC_EnableIRQ' [-Wimplicit-function-declaration]
+   46 |     HAL_NVIC_EnableIRQ(TIM2_IRQn);
+      |     ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'MX_GPIO_Init':
+../Core/Src/main.c:51:5: error: unknown type name 'GPIO_InitTypeDef'
+   51 |     GPIO_InitTypeDef gpio = {0};
+      |     ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:53:5: warning: implicit declaration of function '__HAL_RCC_AFIO_CLK_ENABLE' [-Wimplicit-function-declaration]
+   53 |     __HAL_RCC_AFIO_CLK_ENABLE();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:54:5: warning: implicit declaration of function '__HAL_RCC_GPIOA_CLK_ENABLE' [-Wimplicit-function-declaration]
+   54 |     __HAL_RCC_GPIOA_CLK_ENABLE();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:55:5: warning: implicit declaration of function '__HAL_RCC_GPIOB_CLK_ENABLE' [-Wimplicit-function-declaration]
+   55 |     __HAL_RCC_GPIOB_CLK_ENABLE();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:56:5: warning: implicit declaration of function '__HAL_AFIO_REMAP_SWJ_DISABLE' [-Wimplicit-function-declaration]
+   56 |     __HAL_AFIO_REMAP_SWJ_DISABLE();
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:58:5: warning: implicit declaration of function 'HAL_GPIO_WritePin' [-Wimplicit-function-declaration]
+   58 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_SET);
+      |     ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:58:23: error: 'GPIOA' undeclared (first use in this function)
+   58 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_SET);
+      |                       ^~~~~
+../Core/Src/main.c:58:30: error: 'GPIO_PIN_3' undeclared (first use in this function)
+   58 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_SET);
+      |                              ^~~~~~~~~~
+../Core/Src/main.c:58:42: error: 'GPIO_PIN_SET' undeclared (first use in this function)
+   58 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_SET);
+      |                                          ^~~~~~~~~~~~
+../Core/Src/main.c:59:30: error: 'GPIO_PIN_5' undeclared (first use in this function)
+   59 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7 |
+      |                              ^~~~~~~~~~
+../Core/Src/main.c:59:43: error: 'GPIO_PIN_6' undeclared (first use in this function)
+   59 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7 |
+      |                                           ^~~~~~~~~~
+../Core/Src/main.c:59:56: error: 'GPIO_PIN_7' undeclared (first use in this function)
+   59 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7 |
+      |                                                        ^~~~~~~~~~
+../Core/Src/main.c:60:30: error: 'GPIO_PIN_8' undeclared (first use in this function)
+   60 |                              GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10, GPIO_PIN_RESET);
+      |                              ^~~~~~~~~~
+../Core/Src/main.c:60:43: error: 'GPIO_PIN_9' undeclared (first use in this function)
+   60 |                              GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10, GPIO_PIN_RESET);
+      |                                           ^~~~~~~~~~
+../Core/Src/main.c:60:56: error: 'GPIO_PIN_10' undeclared (first use in this function)
+   60 |                              GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10, GPIO_PIN_RESET);
+      |                                                        ^~~~~~~~~~~
+../Core/Src/main.c:60:69: error: 'GPIO_PIN_RESET' undeclared (first use in this function)
+   60 |                              GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10, GPIO_PIN_RESET);
+      |                                                                     ^~~~~~~~~~~~~~
+../Core/Src/main.c:61:30: error: 'GPIO_PIN_4' undeclared (first use in this function)
+   61 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4 | GPIO_PIN_11 | GPIO_PIN_12 |
+      |                              ^~~~~~~~~~
+../Core/Src/main.c:61:43: error: 'GPIO_PIN_11' undeclared (first use in this function)
+   61 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4 | GPIO_PIN_11 | GPIO_PIN_12 |
+      |                                           ^~~~~~~~~~~
+../Core/Src/main.c:61:57: error: 'GPIO_PIN_12' undeclared (first use in this function)
+   61 |     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4 | GPIO_PIN_11 | GPIO_PIN_12 |
+      |                                                         ^~~~~~~~~~~
+../Core/Src/main.c:62:30: error: 'GPIO_PIN_13' undeclared (first use in this function)
+   62 |                              GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15, GPIO_PIN_SET);
+      |                              ^~~~~~~~~~~
+../Core/Src/main.c:62:44: error: 'GPIO_PIN_14' undeclared (first use in this function)
+   62 |                              GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15, GPIO_PIN_SET);
+      |                                            ^~~~~~~~~~~
+../Core/Src/main.c:62:58: error: 'GPIO_PIN_15' undeclared (first use in this function)
+   62 |                              GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15, GPIO_PIN_SET);
+      |                                                          ^~~~~~~~~~~
+../Core/Src/main.c:63:23: error: 'GPIOB' undeclared (first use in this function)
+   63 |     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 |
+      |                       ^~~~~
+../Core/Src/main.c:63:30: error: 'GPIO_PIN_0' undeclared (first use in this function)
+   63 |     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 |
+      |                              ^~~~~~~~~~
+../Core/Src/main.c:63:43: error: 'GPIO_PIN_1' undeclared (first use in this function)
+   63 |     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 |
+      |                                           ^~~~~~~~~~
+../Core/Src/main.c:63:56: error: 'GPIO_PIN_2' undeclared (first use in this function)
+   63 |     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 |
+      |                                                        ^~~~~~~~~~
+../Core/Src/main.c:67:9: error: request for member 'Pin' in something not a structure or union
+   67 |     gpio.Pin = GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7 |
+      |         ^
+../Core/Src/main.c:70:9: error: request for member 'Mode' in something not a structure or union
+   70 |     gpio.Mode = GPIO_MODE_OUTPUT_PP;
+      |         ^
+../Core/Src/main.c:70:17: error: 'GPIO_MODE_OUTPUT_PP' undeclared (first use in this function)
+   70 |     gpio.Mode = GPIO_MODE_OUTPUT_PP;
+      |                 ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:71:9: error: request for member 'Pull' in something not a structure or union
+   71 |     gpio.Pull = GPIO_NOPULL;
+      |         ^
+../Core/Src/main.c:71:17: error: 'GPIO_NOPULL' undeclared (first use in this function)
+   71 |     gpio.Pull = GPIO_NOPULL;
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c:72:9: error: request for member 'Speed' in something not a structure or union
+   72 |     gpio.Speed = GPIO_SPEED_FREQ_LOW;
+      |         ^
+../Core/Src/main.c:72:18: error: 'GPIO_SPEED_FREQ_LOW' undeclared (first use in this function)
+   72 |     gpio.Speed = GPIO_SPEED_FREQ_LOW;
+      |                  ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:73:5: warning: implicit declaration of function 'HAL_GPIO_Init'; did you mean 'MX_GPIO_Init'? [-Wimplicit-function-declaration]
+   73 |     HAL_GPIO_Init(GPIOA, &gpio);
+      |     ^~~~~~~~~~~~~
+      |     MX_GPIO_Init
+../Core/Src/main.c:75:9: error: request for member 'Pin' in something not a structure or union
+   75 |     gpio.Pin = GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 | GPIO_PIN_4 |
+      |         ^
+../Core/Src/main.c:78:9: error: request for member 'Mode' in something not a structure or union
+   78 |     gpio.Mode = GPIO_MODE_OUTPUT_PP;
+      |         ^
+../Core/Src/main.c:79:9: error: request for member 'Pull' in something not a structure or union
+   79 |     gpio.Pull = GPIO_NOPULL;
+      |         ^
+../Core/Src/main.c:80:9: error: request for member 'Speed' in something not a structure or union
+   80 |     gpio.Speed = GPIO_SPEED_FREQ_LOW;
+      |         ^
+../Core/Src/main.c:83:9: error: request for member 'Pin' in something not a structure or union
+   83 |     gpio.Pin = GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10;
+      |         ^
+../Core/Src/main.c:84:9: error: request for member 'Mode' in something not a structure or union
+   84 |     gpio.Mode = GPIO_MODE_INPUT;
+      |         ^
+../Core/Src/main.c:84:17: error: 'GPIO_MODE_INPUT' undeclared (first use in this function)
+   84 |     gpio.Mode = GPIO_MODE_INPUT;
+      |                 ^~~~~~~~~~~~~~~
+../Core/Src/main.c:85:9: error: request for member 'Pull' in something not a structure or union
+   85 |     gpio.Pull = GPIO_PULLUP;
+      |         ^
+../Core/Src/main.c:85:17: error: 'GPIO_PULLUP' undeclared (first use in this function)
+   85 |     gpio.Pull = GPIO_PULLUP;
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:89:36: error: unknown type name 'TIM_HandleTypeDef'
+   89 | void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *timer)
+      |                                    ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'TIM2_IRQHandler':
+../Core/Src/main.c:100:5: warning: implicit declaration of function 'HAL_TIM_IRQHandler'; did you mean 'TIM2_IRQHandler'? [-Wimplicit-function-declaration]
+  100 |     HAL_TIM_IRQHandler(&htim2);
+      |     ^~~~~~~~~~~~~~~~~~
+      |     TIM2_IRQHandler
+../Core/Src/main.c:100:25: error: 'htim2' undeclared (first use in this function)
+  100 |     HAL_TIM_IRQHandler(&htim2);
+      |                         ^~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:103:6: warning: conflicting types for 'Error_Handler'
+  103 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:17:9: note: previous implicit declaration of 'Error_Handler' was here
+   17 |         Error_Handler();
+      |         ^~~~~~~~~~~~~
+../Core/Src/main.c: In function 'Error_Handler':
+../Core/Src/main.c:105:5: warning: implicit declaration of function '__disable_irq' [-Wimplicit-function-declaration]
+  105 |     __disable_irq();
+      |     ^~~~~~~~~~~~~
+At top level:
+../Core/Src/main.c:49:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+   49 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:31:13: warning: 'MX_TIM2_Init' defined but not used [-Wunused-function]
+   31 | static void MX_TIM2_Init(void)
+      |             ^~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:44:29 **** Incremental Build of configuration Debug for project lab3 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+arm-none-eabi-gcc -o "lab3.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Vi xu li\LAB3\lab3\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3.elf
+ 
+arm-none-eabi-size   lab3.elf 
+arm-none-eabi-objdump -h -S  lab3.elf  > "lab3.list"
+arm-none-eabi-objcopy  -O ihex  lab3.elf  "lab3.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9204	     36	   1668	  10908	   2a9c	lab3.elf
+arm-none-eabi-objcopy  -O binary  lab3.elf  "lab3.bin"
+Finished building: default.size.stdout
+ 
+Finished building: lab3.hex
+Finished building: lab3.bin
+ 
+ 
+Finished building: lab3.list
+ 
+13:58:46 **** Incremental Build of configuration Debug for project lab3 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lab3.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Vi xu li\LAB3\lab3\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3.elf
+ 
+arm-none-eabi-size   lab3.elf 
+arm-none-eabi-objdump -h -S  lab3.elf  > "lab3.list"
+arm-none-eabi-objcopy  -O ihex  lab3.elf  "lab3.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9204	     36	   1668	  10908	   2a9c	lab3.elf
+arm-none-eabi-objcopy  -O binary  lab3.elf  "lab3.bin"
+Finished building: default.size.stdout
+ 
+Finished building: lab3.hex
+Finished building: lab3.bin
+ 
+Finished building: lab3.list
+ 
+ 
+07:16:10 **** Incremental Build of configuration Debug for project lab3 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lab3.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Vi xu li\LAB3\lab3\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3.elf
+ 
+arm-none-eabi-size   lab3.elf 
+arm-none-eabi-objdump -h -S  lab3.elf  > "lab3.list"
+arm-none-eabi-objcopy  -O ihex  lab3.elf  "lab3.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9216	     36	   1668	  10920	   2aa8	lab3.elf
+arm-none-eabi-objcopy  -O binary  lab3.elf  "lab3.bin"
+Finished building: default.size.stdout
+ 
+Finished building: lab3.hex
+Finished building: lab3.bin
+ 
+ 
+Finished building: lab3.list
+ 
+07:25:04 **** Incremental Build of configuration Debug for project lab3 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lab3.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Vi xu li\LAB3\lab3\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab3.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab3.elf
+ 
+arm-none-eabi-size   lab3.elf 
+arm-none-eabi-objdump -h -S  lab3.elf  > "lab3.list"
+arm-none-eabi-objcopy  -O ihex  lab3.elf  "lab3.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9356	     36	   1668	  11060	   2b34	lab3.elf
+arm-none-eabi-objcopy  -O binary  lab3.elf  "lab3.bin"
+Finished building: default.size.stdout
+ 
+Finished building: lab3.hex
+Finished building: lab3.bin
+Finished building: lab3.list
+ 
+ 
+ 

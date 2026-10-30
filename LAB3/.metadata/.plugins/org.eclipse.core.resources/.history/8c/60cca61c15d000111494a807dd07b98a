@@ -1,0 +1,95 @@
+#include "main.h"
+#include <stdint.h>
+
+TIM_HandleTypeDef htim2;
+
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+static void MX_TIM2_Init(void);
+void Error_Handler(void);
+
+typedef enum {
+    TRAFFIC_RED = 0,
+    TRAFFIC_AMBER,
+    TRAFFIC_GREEN,
+    TRAFFIC_OFF
+} TrafficColor;
+
+void Button_Init(void);
+void Button_ScanTick(void);
+uint8_t Button_GetPressed(uint8_t index);
+void Display_Init(void);
+void Display_SetValues(uint8_t vertical_value, uint8_t horizontal_value);
+void Display_Scan(void);
+void Display_SetTrafficLights(TrafficColor horizontal, TrafficColor vertical);
+void fsm_system_init(void);
+void fsm_system_run(void);
+
+/* Button input and debounce */
+#define BUTTON_COUNT 3u
+#define BUTTON_HISTORY_MASK 0x07u
+
+static const uint16_t button_pins[BUTTON_COUNT] = {
+    GPIO_PIN_8,
+    GPIO_PIN_9,
+    GPIO_PIN_10
+};
+
+static uint8_t history[BUTTON_COUNT] = {0x07u, 0x07u, 0x07u};
+static uint8_t released_state[BUTTON_COUNT] = {1u, 1u, 1u};
+static volatile uint8_t pressed_events[BUTTON_COUNT] = {0u, 0u, 0u};
+
+void Button_Init(void)
+{
+    for (uint8_t i = 0; i < BUTTON_COUNT; ++i) {
+        history[i] = BUTTON_HISTORY_MASK;
+        released_state[i] = 1u;
+        pressed_events[i] = 0u;
+    }
+}
+
+void Button_ScanTick(void)
+{
+    for (uint8_t i = 0; i < BUTTON_COUNT; ++i) {
+        uint8_t sample = (HAL_GPIO_ReadPin(GPIOB, button_pins[i]) == GPIO_PIN_SET) ? 1u : 0u;
+        history[i] = (uint8_t)(((history[i] << 1) | sample) & BUTTON_HISTORY_MASK);
+
+        if (history[i] == 0u) {
+            if (released_state[i] != 0u) {
+                released_state[i] = 0u;
+                pressed_events[i] = 1u;
+            }
+        } else if (history[i] == BUTTON_HISTORY_MASK) {
+            released_state[i] = 1u;
+        }
+    }
+}
+
+uint8_t Button_GetPressed(uint8_t index)
+{
+    uint8_t result;
+
+    if (index >= BUTTON_COUNT) {
+        return 0u;
+    }
+
+    __disable_irq();
+    result = pressed_events[index];
+    pressed_events[index] = 0u;
+    __enable_irq();
+
+    return result;
+}
+
+/* Seven-segment display and traffic-light output */
+#define SEGMENT_GROUP1_PINS (GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_5 | GPIO_PIN_6)
+#define SEGMENT_GROUP2_PORTA_PINS (GPIO_PIN_4 | GPIO_PIN_11 | GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15)
+#define DIGIT_ENABLE_PINS (GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15)
+#define DISPLAY_SCAN_INTERVAL_MS 2u
+
+#define RED_A_PIN GPIO_PIN_5
+#define GREEN_A_PIN GPIO_PIN_6
+#define AMBER_A_PIN GPIO_PIN_7
+#define RED_B_PIN GPIO_PIN_8
+#define GREEN_B_PIN GPIO_PIN_9
+#define AMBER_B_PIN GPIO_PIN_10

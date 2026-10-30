@@ -1,0 +1,692 @@
+#include "main.h"
+#include <stdint.h>
+
+/* Single-file Lab 3 implementation based on the uploaded PDF schematic.
+   Buttons: PB8=BUT1, PB9=BUT2, PB10=BUT3 (active low).
+   Traffic lamps: PA5=REDA, PA6=GREENA, PA7=YELLOWA,
+                  PA8=REDB, PA9=GREENB, PA10=YELLOWB.
+   Seven-segment group 1: PB0..PB6 = a1..g1.
+   Seven-segment group 2: PA4=a2, PA11..PA15=b2..f2, PB7=g2.
+   Digit enables: PB15=EN0, PB12=EN1, PB13=EN2, PB14=EN3 (active low).
+   TIM2 update interrupt: 10 ms. */
+
+TIM_HandleTypeDef htim2;
+
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+static void MX_TIM2_Init(void);
+void Error_Handler(void);
+
+typedef enum {
+    TRAFFIC_RED = 0,
+    TRAFFIC_AMBER,
+    TRAFFIC_GREEN,
+    TRAFFIC_OFF
+} TrafficColor;
+
+void Button_Init(void);
+void Button_ScanTick(void);
+uint8_t Button_GetPressed(uint8_t index);
+void Display_Init(void);
+void Display_SetValues(uint8_t vertical_value, uint8_t horizontal_value);
+void Display_Scan(void);
+void Display_SetTrafficLights(TrafficColor horizontal, TrafficColor vertical);
+void fsm_system_init(void);
+void fsm_system_run(void);
+
+/* Button input and debounce */
+#define BUTTON_COUNT 3u
+#define BUTTON_HISTORY_MASK 0x07u
+
+static const uint16_t button_pins[BUTTON_COUNT] = {
+    GPIO_PIN_8,
+    GPIO_PIN_9,
+    GPIO_PIN_10
+};
+
+static uint8_t history[BUTTON_COUNT] = {0x07u, 0x07u, 0x07u};
+static uint8_t released_state[BUTTON_COUNT] = {1u, 1u, 1u};
+static volatile uint8_t pressed_events[BUTTON_COUNT] = {0u, 0u, 0u};
+
+void Button_Init(void)
+{
+    for (uint8_t i = 0; i < BUTTON_COUNT; ++i) {
+        history[i] = BUTTON_HISTORY_MASK;
+        released_state[i] = 1u;
+        pressed_events[i] = 0u;
+    }
+}
+
+void Button_ScanTick(void)
+{
+    for (uint8_t i = 0; i < BUTTON_COUNT; ++i) {
+        uint8_t sample = (HAL_GPIO_ReadPin(GPIOB, button_pins[i]) == GPIO_PIN_SET) ? 1u : 0u;
+        history[i] = (uint8_t)(((history[i] << 1) | sample) & BUTTON_HISTORY_MASK);
+
+        if (history[i] == 0u) {
+            if (released_state[i] != 0u) {
+                released_state[i] = 0u;
+                pressed_events[i] = 1u;
+            }
+        } else if (history[i] == BUTTON_HISTORY_MASK) {
+            released_state[i] = 1u;
+        }
+    }
+}
+
+uint8_t Button_GetPressed(uint8_t index)
+{
+    uint8_t result;
+
+    if (index >= BUTTON_COUNT) {
+        return 0u;
+    }
+
+    __disable_irq();
+    result = pressed_events[index];
+    pressed_events[index] = 0u;
+    __enable_irq();
+
+    return result;
+}
+
+/* Seven-segment display and traffic-light output */
+#define DIGIT_ENABLE_PINS (GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15)
+#define DISPLAY_SCAN_INTERVAL_MS 2u
+
+
+static const uint8_t segment_code[10] = {
+    0xC0u, 0xF9u, 0xA4u, 0xB0u, 0x99u,
+    0x92u, 0x82u, 0xF8u, 0x80u, 0x90u
+};
+
+static uint8_t vertical_digits[2] = {0u, 0u};
+static uint8_t horizontal_digits[2] = {0u, 0u};
+static uint8_t scan_index = 0u;
+static uint32_t last_scan_ms = 0u;
+
+static GPIO_PinState bit_level(uint8_t pattern, uint8_t bit_index)
+{
+    return ((pattern & (uint8_t)(1u << bit_index)) != 0u) ? GPIO_PIN_SET : GPIO_PIN_RESET;
+}
+
+static void all_digits_off(void)
+{
+    HAL_GPIO_WritePin(GPIOB, DIGIT_ENABLE_PINS, GPIO_PIN_SET);
+}
+
+static void write_segment_group1(uint8_t pattern)
+{
+    const uint16_t pins[7] = {
+        GPIO_PIN_0, GPIO_PIN_1, GPIO_PIN_2, GPIO_PIN_3,
+        GPIO_PIN_4, GPIO_PIN_5, GPIO_PIN_6
+    };
+
+    for (uint8_t i = 0; i < 7u; ++i) {
+        HAL_GPIO_WritePin(GPIOB, pins[i], bit_level(pattern, i));
+    }
+}
+
+static void write_segment_group2(uint8_t pattern)
+{
+    const uint16_t porta_pins[6] = {
+        GPIO_PIN_4, GPIO_PIN_11, GPIO_PIN_12,
+        GPIO_PIN_13, GPIO_PIN_14, GPIO_PIN_15
+    };
+
+    for (uint8_t i = 0; i < 6u; ++i) {
+        HAL_GPIO_WritePin(GPIOA, porta_pins[i], bit_level(pattern, i));
+    }
+    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7, bit_level(pattern, 6u));
+}
+
+static void write_digit(uint8_t index)
+{
+    uint8_t digit;
+    uint16_t enable_pin;
+
+    all_digits_off();
+
+    /* The sample schematic wires segment group 1 to the upper pair (EN0, EN1). */
+    /* PB15 = EN0 and PB12 = EN1. */
+    /* Segment group 2 is wired to the lower pair (EN2, EN3). */
+    /* PB13 = EN2 and PB14 = EN3. */
+    switch (index) {
+    case 0u:
+        digit = horizontal_digits[0];
+        write_segment_group1(segment_code[digit]);
+        enable_pin = GPIO_PIN_15;
+        break;
+    case 1u:
+        digit = horizontal_digits[1];
+        write_segment_group1(segment_code[digit]);
+        enable_pin = GPIO_PIN_12;
+        break;
+    case 2u:
+        digit = vertical_digits[0];
+        write_segment_group2(segment_code[digit]);
+        enable_pin = GPIO_PIN_13;
+        break;
+    default:
+        digit = vertical_digits[1];
+        write_segment_group2(segment_code[digit]);
+        enable_pin = GPIO_PIN_14;
+        break;
+    }
+
+    HAL_GPIO_WritePin(GPIOB, enable_pin, GPIO_PIN_RESET);
+}
+
+static void split_value(uint8_t value, uint8_t digits[2])
+{
+    if (value > 99u) {
+        value = 99u;
+    }
+    digits[0] = (uint8_t)(value / 10u);
+    digits[1] = (uint8_t)(value % 10u);
+}
+
+void Display_Init(void)
+{
+    vertical_digits[0] = 0u;
+    vertical_digits[1] = 0u;
+    horizontal_digits[0] = 0u;
+    horizontal_digits[1] = 0u;
+    scan_index = 0u;
+    last_scan_ms = HAL_GetTick() - DISPLAY_SCAN_INTERVAL_MS;
+    all_digits_off();
+}
+
+void Display_SetValues(uint8_t vertical_value, uint8_t horizontal_value)
+{
+    split_value(vertical_value, vertical_digits);
+    split_value(horizontal_value, horizontal_digits);
+}
+
+void Display_Scan(void)
+{
+    uint32_t now = HAL_GetTick();
+
+    if ((uint32_t)(now - last_scan_ms) < DISPLAY_SCAN_INTERVAL_MS) {
+        return;
+    }
+
+    last_scan_ms = now;
+    write_digit(scan_index);
+    scan_index = (uint8_t)((scan_index + 1u) & 0x03u);
+}
+
+static void write_color(TrafficColor color, uint16_t red_pin, uint16_t amber_pin, uint16_t green_pin)
+{
+    HAL_GPIO_WritePin(GPIOA, red_pin, (color == TRAFFIC_RED) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOA, amber_pin, (color == TRAFFIC_AMBER) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOA, green_pin, (color == TRAFFIC_GREEN) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+}
+
+void Display_SetTrafficLights(TrafficColor horizontal, TrafficColor vertical)
+{
+    /* Schematic labels: PA5=red1, PA6=green1, PA7=yellow1.
+       PA8=red2, PA9=green2, PA10=yellow2. */
+    write_color(horizontal, GPIO_PIN_5, GPIO_PIN_7, GPIO_PIN_6);
+    write_color(vertical, GPIO_PIN_8, GPIO_PIN_10, GPIO_PIN_9);
+}
+
+/* Four-mode FSM and real-time traffic-light timing.
+   Normal mode uses HAL_GetTick(): horizontal green 3 s, horizontal yellow 2 s,
+   vertical green 3 s, vertical yellow 2 s, then repeats. Default red duration
+   is 5 s; if configured red is longer than the opposing green+yellow interval,
+   the additional time is spent with both directions red. */
+#define MIN_DURATION_SECONDS 1u
+#define MAX_DURATION_SECONDS 99u
+#define BLINK_INTERVAL_MS 250u
+
+
+typedef enum {
+    MODE_NORMAL = 1,
+    MODE_EDIT_RED = 2,
+    MODE_EDIT_AMBER = 3,
+    MODE_EDIT_GREEN = 4
+} SystemMode;
+
+typedef enum {
+    PHASE_HORIZONTAL_GREEN = 0,
+    PHASE_HORIZONTAL_AMBER,
+    PHASE_ALL_RED_TO_VERTICAL,
+    PHASE_VERTICAL_GREEN,
+    PHASE_VERTICAL_AMBER,
+    PHASE_ALL_RED_TO_HORIZONTAL
+} TrafficPhase;
+
+static SystemMode system_mode = MODE_NORMAL;
+static TrafficPhase traffic_phase = PHASE_HORIZONTAL_GREEN;
+static uint32_t phase_started_ms = 0u;
+static uint32_t last_blink_ms = 0u;
+static uint8_t blink_on = 1u;
+static uint8_t edit_value = 5u;
+
+static uint8_t red_horizontal = 5u;
+static uint8_t red_vertical = 5u;
+static uint8_t amber_horizontal = 2u;
+static uint8_t amber_vertical = 2u;
+static uint8_t green_horizontal = 3u;
+static uint8_t green_vertical = 3u;
+
+static uint32_t all_red_to_vertical_seconds(void)
+{
+    uint32_t opposing_interval = (uint32_t)green_horizontal + (uint32_t)amber_horizontal;
+    return (red_vertical > opposing_interval) ? ((uint32_t)red_vertical - opposing_interval) : 0u;
+}
+
+static uint32_t all_red_to_horizontal_seconds(void)
+{
+    /* The horizontal road becomes red before the vertical green phase starts.
+       Therefore its red interval already includes the all-red interval before
+       the vertical road gets green. Subtract that interval as well, otherwise
+       the horizontal red duration becomes too long after red is increased. */
+    uint32_t opposing_interval = (uint32_t)green_vertical + (uint32_t)amber_vertical;
+    uint32_t preceding_all_red = all_red_to_vertical_seconds();
+    uint32_t used_interval = opposing_interval + preceding_all_red;
+
+    return (red_horizontal > used_interval)
+        ? ((uint32_t)red_horizontal - used_interval)
+        : 0u;
+}
+
+/* Demo clock: each displayed second lasts 900 ms instead of 1000 ms.
+   This makes the countdown transition a little faster while keeping the
+   countdown synchronized with the traffic-light phases. Set to 1000u for
+   real-time seconds. */
+#define SECOND_MS 900u
+
+static uint32_t phase_duration_ms(TrafficPhase phase)
+{
+    switch (phase) {
+    case PHASE_HORIZONTAL_GREEN:
+        return (uint32_t)green_horizontal * SECOND_MS;
+    case PHASE_HORIZONTAL_AMBER:
+        return (uint32_t)amber_horizontal * SECOND_MS;
+    case PHASE_ALL_RED_TO_VERTICAL:
+        return all_red_to_vertical_seconds() * SECOND_MS;
+    case PHASE_VERTICAL_GREEN:
+        return (uint32_t)green_vertical * SECOND_MS;
+    case PHASE_VERTICAL_AMBER:
+        return (uint32_t)amber_vertical * SECOND_MS;
+    case PHASE_ALL_RED_TO_HORIZONTAL:
+        return all_red_to_horizontal_seconds() * SECOND_MS;
+    default:
+        return SECOND_MS;
+    }
+}
+
+static TrafficPhase next_phase(TrafficPhase phase)
+{
+    switch (phase) {
+    case PHASE_HORIZONTAL_GREEN:
+        return PHASE_HORIZONTAL_AMBER;
+    case PHASE_HORIZONTAL_AMBER:
+        return PHASE_ALL_RED_TO_VERTICAL;
+    case PHASE_ALL_RED_TO_VERTICAL:
+        return PHASE_VERTICAL_GREEN;
+    case PHASE_VERTICAL_GREEN:
+        return PHASE_VERTICAL_AMBER;
+    case PHASE_VERTICAL_AMBER:
+        return PHASE_ALL_RED_TO_HORIZONTAL;
+    case PHASE_ALL_RED_TO_HORIZONTAL:
+    default:
+        return PHASE_HORIZONTAL_GREEN;
+    }
+}
+
+static void apply_traffic_phase(void)
+{
+    switch (traffic_phase) {
+    case PHASE_HORIZONTAL_GREEN:
+        Display_SetTrafficLights(TRAFFIC_GREEN, TRAFFIC_RED);
+        break;
+    case PHASE_HORIZONTAL_AMBER:
+        Display_SetTrafficLights(TRAFFIC_AMBER, TRAFFIC_RED);
+        break;
+    case PHASE_ALL_RED_TO_VERTICAL:
+    case PHASE_ALL_RED_TO_HORIZONTAL:
+        Display_SetTrafficLights(TRAFFIC_RED, TRAFFIC_RED);
+        break;
+    case PHASE_VERTICAL_GREEN:
+        Display_SetTrafficLights(TRAFFIC_RED, TRAFFIC_GREEN);
+        break;
+    case PHASE_VERTICAL_AMBER:
+        Display_SetTrafficLights(TRAFFIC_RED, TRAFFIC_AMBER);
+        break;
+    default:
+        Display_SetTrafficLights(TRAFFIC_RED, TRAFFIC_RED);
+        break;
+    }
+}
+
+static uint32_t phase_remaining_ms(TrafficPhase phase, uint32_t now)
+{
+    uint32_t duration = phase_duration_ms(phase);
+    uint32_t elapsed = (uint32_t)(now - phase_started_ms);
+
+    if (elapsed >= duration) {
+        return 0u;
+    }
+    return duration - elapsed;
+}
+
+static uint32_t h_countdown_ms(uint32_t now)
+{
+    uint32_t remaining = phase_remaining_ms(traffic_phase, now);
+
+    switch (traffic_phase) {
+    case PHASE_HORIZONTAL_GREEN:
+    case PHASE_HORIZONTAL_AMBER:
+    case PHASE_ALL_RED_TO_HORIZONTAL:
+        return remaining;
+    case PHASE_ALL_RED_TO_VERTICAL:
+        return remaining + phase_duration_ms(PHASE_VERTICAL_GREEN)
+                        + phase_duration_ms(PHASE_VERTICAL_AMBER)
+                        + phase_duration_ms(PHASE_ALL_RED_TO_HORIZONTAL);
+    case PHASE_VERTICAL_GREEN:
+        return remaining + phase_duration_ms(PHASE_VERTICAL_AMBER)
+                        + phase_duration_ms(PHASE_ALL_RED_TO_HORIZONTAL);
+    case PHASE_VERTICAL_AMBER:
+        return remaining + phase_duration_ms(PHASE_ALL_RED_TO_HORIZONTAL);
+    default:
+        return remaining;
+    }
+}
+
+static uint32_t v_countdown_ms(uint32_t now)
+{
+    uint32_t remaining = phase_remaining_ms(traffic_phase, now);
+
+    switch (traffic_phase) {
+    case PHASE_HORIZONTAL_GREEN:
+        return remaining + phase_duration_ms(PHASE_HORIZONTAL_AMBER)
+                        + phase_duration_ms(PHASE_ALL_RED_TO_VERTICAL);
+    case PHASE_HORIZONTAL_AMBER:
+        return remaining + phase_duration_ms(PHASE_ALL_RED_TO_VERTICAL);
+    case PHASE_ALL_RED_TO_VERTICAL:
+    case PHASE_VERTICAL_GREEN:
+    case PHASE_VERTICAL_AMBER:
+        return remaining;
+    case PHASE_ALL_RED_TO_HORIZONTAL:
+        return remaining + phase_duration_ms(PHASE_HORIZONTAL_GREEN)
+                        + phase_duration_ms(PHASE_HORIZONTAL_AMBER)
+                        + phase_duration_ms(PHASE_ALL_RED_TO_VERTICAL);
+    default:
+        return remaining;
+    }
+}
+
+static uint8_t milliseconds_to_seconds(uint32_t milliseconds)
+{
+    uint32_t seconds = (milliseconds + SECOND_MS - 1u) / SECOND_MS;
+    if (seconds > 99u) {
+        seconds = 99u;
+    }
+    return (uint8_t)seconds;
+}
+
+static void update_normal_mode(uint32_t now)
+{
+    uint8_t guard = 0u;
+
+    while (guard < 8u) {
+        uint32_t duration = phase_duration_ms(traffic_phase);
+        uint32_t elapsed = (uint32_t)(now - phase_started_ms);
+
+        if (duration == 0u || elapsed >= duration) {
+            if (duration > 0u) {
+                phase_started_ms += duration;
+            }
+            traffic_phase = next_phase(traffic_phase);
+            ++guard;
+            continue;
+        }
+        break;
+    }
+
+    apply_traffic_phase();
+    Display_SetValues(milliseconds_to_seconds(v_countdown_ms(now)),
+                      milliseconds_to_seconds(h_countdown_ms(now)));
+}
+
+static void apply_edit_mode_lights(void)
+{
+    TrafficColor color = TRAFFIC_RED;
+
+    if (system_mode == MODE_EDIT_AMBER) {
+        color = TRAFFIC_AMBER;
+    } else if (system_mode == MODE_EDIT_GREEN) {
+        color = TRAFFIC_GREEN;
+    }
+
+    if (blink_on != 0u) {
+        Display_SetTrafficLights(color, color);
+    } else {
+        Display_SetTrafficLights(TRAFFIC_OFF, TRAFFIC_OFF);
+    }
+}
+
+static void load_edit_value(void)
+{
+    switch (system_mode) {
+    case MODE_EDIT_RED:
+        edit_value = red_horizontal;
+        break;
+    case MODE_EDIT_AMBER:
+        edit_value = amber_horizontal;
+        break;
+    case MODE_EDIT_GREEN:
+        edit_value = green_horizontal;
+        break;
+    default:
+        edit_value = 0u;
+        break;
+    }
+}
+
+static void commit_edit_value(void)
+{
+    switch (system_mode) {
+    case MODE_EDIT_RED:
+        red_horizontal = edit_value;
+        red_vertical = edit_value;
+        break;
+    case MODE_EDIT_AMBER:
+        amber_horizontal = edit_value;
+        amber_vertical = edit_value;
+        break;
+    case MODE_EDIT_GREEN:
+        green_horizontal = edit_value;
+        green_vertical = edit_value;
+        break;
+    default:
+        break;
+    }
+}
+
+static void enter_mode(SystemMode new_mode, uint32_t now)
+{
+    system_mode = new_mode;
+    blink_on = 1u;
+    last_blink_ms = now;
+
+    if (system_mode == MODE_NORMAL) {
+        traffic_phase = PHASE_HORIZONTAL_GREEN;
+        phase_started_ms = now;
+        apply_traffic_phase();
+    } else {
+        load_edit_value();
+        apply_edit_mode_lights();
+        Display_SetValues(edit_value, (uint8_t)system_mode);
+    }
+}
+
+void fsm_system_init(void)
+{
+    uint32_t now = HAL_GetTick();
+    system_mode = MODE_NORMAL;
+    traffic_phase = PHASE_HORIZONTAL_GREEN;
+    phase_started_ms = now;
+    last_blink_ms = now;
+    blink_on = 1u;
+    Display_SetTrafficLights(TRAFFIC_GREEN, TRAFFIC_RED);
+    Display_SetValues(5u, 3u);
+}
+
+void fsm_system_run(void)
+{
+    uint32_t now = HAL_GetTick();
+    uint8_t button1 = Button_GetPressed(0u);
+    uint8_t button2 = Button_GetPressed(1u);
+    uint8_t button3 = Button_GetPressed(2u);
+
+    if (button1 != 0u) {
+        if (system_mode == MODE_EDIT_GREEN) {
+            enter_mode(MODE_NORMAL, now);
+        } else {
+            enter_mode((SystemMode)(system_mode + 1), now);
+        }
+        return;
+    }
+
+    if (system_mode == MODE_NORMAL) {
+        update_normal_mode(now);
+        return;
+    }
+
+    if (button2 != 0u) {
+        edit_value = (edit_value >= MAX_DURATION_SECONDS) ? MIN_DURATION_SECONDS : (uint8_t)(edit_value + 1u);
+    }
+    if (button3 != 0u) {
+        commit_edit_value();
+    }
+
+    while ((uint32_t)(now - last_blink_ms) >= BLINK_INTERVAL_MS) {
+        last_blink_ms += BLINK_INTERVAL_MS;
+        blink_on = (uint8_t)!blink_on;
+    }
+
+    apply_edit_mode_lights();
+    Display_SetValues(edit_value, (uint8_t)system_mode);
+}
+
+/* MCU initialization and main loop */
+int main(void)
+{
+    HAL_Init();
+    SystemClock_Config();
+    MX_GPIO_Init();
+    MX_TIM2_Init();
+
+    Button_Init();
+    Display_Init();
+    fsm_system_init();
+
+    if (HAL_TIM_Base_Start_IT(&htim2) != HAL_OK) {
+        Error_Handler();
+    }
+
+    while (1) {
+        fsm_system_run();
+        Display_Scan();
+    }
+}
+
+void SystemClock_Config(void)
+{
+    RCC_OscInitTypeDef oscillator = {0};
+    RCC_ClkInitTypeDef clock = {0};
+
+    oscillator.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+    oscillator.HSIState = RCC_HSI_ON;
+    oscillator.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+    oscillator.PLL.PLLState = RCC_PLL_NONE;
+    if (HAL_RCC_OscConfig(&oscillator) != HAL_OK) {
+        Error_Handler();
+    }
+
+    clock.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK
+                    | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
+    clock.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
+    clock.AHBCLKDivider = RCC_SYSCLK_DIV1;
+    clock.APB1CLKDivider = RCC_HCLK_DIV1;
+    clock.APB2CLKDivider = RCC_HCLK_DIV1;
+    if (HAL_RCC_ClockConfig(&clock, FLASH_LATENCY_0) != HAL_OK) {
+        Error_Handler();
+    }
+}
+
+static void MX_TIM2_Init(void)
+{
+    __HAL_RCC_TIM2_CLK_ENABLE();
+
+    htim2.Instance = TIM2;
+    htim2.Init.Prescaler = 7999u;
+    htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
+    htim2.Init.Period = 9u;
+    htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+    htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+    if (HAL_TIM_Base_Init(&htim2) != HAL_OK) {
+        Error_Handler();
+    }
+
+    HAL_NVIC_SetPriority(TIM2_IRQn, 1u, 0u);
+    HAL_NVIC_EnableIRQ(TIM2_IRQn);
+}
+
+static void MX_GPIO_Init(void)
+{
+    GPIO_InitTypeDef gpio = {0};
+
+    __HAL_RCC_AFIO_CLK_ENABLE();
+    __HAL_RCC_GPIOA_CLK_ENABLE();
+    __HAL_RCC_GPIOB_CLK_ENABLE();
+    __HAL_AFIO_REMAP_SWJ_DISABLE();
+
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7 |
+                             GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10, GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4 | GPIO_PIN_11 | GPIO_PIN_12 |
+                             GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 |
+                             GPIO_PIN_4 | GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7, GPIO_PIN_SET);
+    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15, GPIO_PIN_SET);
+
+    gpio.Pin = GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7 |
+               GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10 | GPIO_PIN_11 | GPIO_PIN_12 |
+               GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15;
+    gpio.Mode = GPIO_MODE_OUTPUT_PP;
+    gpio.Pull = GPIO_NOPULL;
+    gpio.Speed = GPIO_SPEED_FREQ_LOW;
+    HAL_GPIO_Init(GPIOA, &gpio);
+
+    gpio.Pin = GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 | GPIO_PIN_4 |
+               GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7 | GPIO_PIN_12 | GPIO_PIN_13 |
+               GPIO_PIN_14 | GPIO_PIN_15;
+    gpio.Mode = GPIO_MODE_OUTPUT_PP;
+    gpio.Pull = GPIO_NOPULL;
+    gpio.Speed = GPIO_SPEED_FREQ_LOW;
+    HAL_GPIO_Init(GPIOB, &gpio);
+
+    gpio.Pin = GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10;
+    gpio.Mode = GPIO_MODE_INPUT;
+    gpio.Pull = GPIO_PULLUP;
+    HAL_GPIO_Init(GPIOB, &gpio);
+}
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *timer)
+{
+    if (timer->Instance == TIM2) {
+        Button_ScanTick();
+    }
+}
+
+void Error_Handler(void)
+{
+    __disable_irq();
+    while (1) {
+    }
+}
